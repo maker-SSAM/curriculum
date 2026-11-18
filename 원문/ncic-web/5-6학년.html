@@ -1,0 +1,1411 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta property="og:image" content="/images/default/main/myimage.jpg" /><!-- 이미지 FULL URL 주소 -->
+		
+		<meta name="description" content="국가교육과정정보센터(NCIC)는 국가교육위원회와 한국교육과정평가원에서 공동 운영하고 있는 국내외 교육과정의 정보 공유 시스템입니다.">
+	
+<meta property="og:title" content="NCIC 국가교육과정정보센터">
+<meta property="og:type" content="website"> 
+<meta property="og:url" content="https://ncic.re.kr">
+<meta property="og:description" content="국가교육과정정보센터(NCIC)는 국가교육위원회와 한국교육과정평가원에서 공동 운영하고 있는 국내외 교육과정의 정보 공유 시스템입니다.">
+		
+		<meta name="_csrf" content="a14b746e-e157-47f3-98f3-d124d61d04a9"/>
+		<meta name="_csrf_header" content="X-CSRF-TOKEN"/>
+		
+		<title>우리나라 교육과정 - NCIC 국가교육과정정보센터</title>
+		
+		<link rel="shortcut icon" href="/images/default/main/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="/css/base.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="/css/board.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="/css/calendar.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="/css/member.css?v=0.1" media="screen" />
+		<link rel="stylesheet" type="text/css" href="/css/xeicon.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="/css/remixicon.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="/css/krds/common.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="/css/krds/component.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="/css/krds/krds_tokens.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="/css/default/layout.css?v=0.6" media="screen" />
+		<link rel="stylesheet" type="text/css" href="/css/default/layout_content.css?v=0.3" media="screen" />
+		<link rel="stylesheet" type="text/css" href="/css/default/content.css?v=0.3" media="screen" />
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+		<link rel="stylesheet" type="text/css" href="/css/plugin/jquery-ui-timepicker-addon.css" media="screen">
+		<link rel="stylesheet" href="/css/plugin/swiper.min.css"/>
+		<link rel="stylesheet" href="/css/plugin/font-awesome.min.css" />
+		<link rel="stylesheet" href="/js/plugin/lightbox/jquery.magnify.min.css" />
+		<link rel="stylesheet" href="/js/plugin/modal/jquery.modal.min.css" />
+		<link rel="stylesheet" href="/css/plugin/preloader.css">
+		<link rel="stylesheet" href="/js/plugin/tree/skin-win8/ui.fancytree.min.css" />
+		
+		<script type="text/javascript" src="/js/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="/js/jquery_ui-1.12.1.js"></script>
+		<script type="text/javascript" src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/MotionPathPlugin.min.js"></script>
+		<script type="text/javascript" src="/js/common.js"></script> 
+		<script type="text/javascript" src="/js/content.js"></script>
+		<script type="text/javascript" src="/js/plugin/jquery-ui-timepicker-addon.js"></script>	
+		<script type="text/javascript" src="/js/menu/menu.js"></script>
+		<script type="text/javascript" src="/js/plugin/jquery.bxslider.min.js"></script>
+		
+		<script type="text/javascript" src="/js/core/dc_ajax.js"></script>
+		
+		<script src="/js/plugin/swiper.min.js"></script>
+		<script src="/js/plugin/lightbox/jquery.magnify.min.js"></script>
+		<script src="/js/plugin/modal/jquery.modal.min.js"></script>
+		<script src="/js/plugin/jquery.preloader.min.js"></script>
+		<script src="//t1.kakaocdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+		<script type="text/javascript" src="/js/krds/ui-script.js"></script>
+		
+		<script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+		<script src="/js/plugin/tree/jquery.fancytree-all-deps.min.js"></script>
+		<script type="text/javascript" src="/js/ncic/search.js"></script>
+		
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-JDL5M35V3P"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		
+		  gtag('config', 'G-JDL5M35V3P');
+		</script>
+		
+		
+		
+		<script>
+			var sub = ''
+			var csTkn = $("meta[name='_csrf']").attr("content")
+			var csTknH = $("meta[name='_csrf_header']").attr("content");
+			
+			//메뉴관련
+			var menuCode = 'org_list';
+			var leftMenuUse = '1';
+			var tapMenuUse = '0';
+			
+			const ST = {
+		        
+		            SUCCESS: 'success',
+		        
+		            NODATA: 'NoData',
+		        
+		            ERROR: 'fail',
+		        
+		            ERROR_MSG: '정상적인 접근이 아닙니다.'
+		        
+		    };
+			
+			$(document).ready(function(){
+				
+				//이용약관 등의 회원 서비스일 경우 로그인 했을 때 로그인 등의 메뉴를 지우기 위한 함수
+				if($('.left_title').text() == '회원서비스'){
+					var userLevelNum = '0';
+					removeLeftMenu($('ul.left_menu_ul li'), userLevelNum);
+				}
+				
+				if('N' != 'Y'){
+					$('.krds-side-navigation').hide();
+				}
+		        
+		        /* START : 임시비밀번호 발급 여부 확인 */
+	            let isTempPw = '';      // 임시 비밀번호 발급 여부, 1: 발급
+	            let currPath = $(location).attr('pathname');
+	            let returnPath = "/mbr/edit_account_confirm.do";
+	            let exceptPaths = [
+	                
+	                    "/mbr/edit_account_confirm.do",
+	                
+	                    "/mbr/edit_account.do",
+	                
+	                    "/mbr/mypage.do"
+	                
+	            ];        // 비밀번호 변경 시 수행되는 api는 제외 
+	            
+	            if(isTempPw == '1' && exceptPaths.indexOf(currPath) < 0){
+	                openAlertPopup('임시 비밀번호를 발급받으신 경우 [회원정보 수정] 페이지에서 비밀번호를 변경하셔야 합니다.', function() {
+	                    location.href = returnPath;
+	                });
+	            } 
+	            /* END */
+				
+				//모바일 탭메뉴
+				$('.left_menu > ul').addClass('tab_ul');
+				var ts = 0;
+				$('.tab_view').click(function(){
+					if(ts == 0){
+						$(this).addClass('on');
+						$('.tab_ul').slideDown(300);
+						ts = 1;
+					}else{
+						$(this).removeClass('on');
+						$('.tab_ul').slideUp(300);
+						ts = 0;
+					}
+				});
+				$(window).resize(function(){
+					if($(window).width() > 1030){
+					  $('.tab_ul').css('display','flex');
+					}else{
+					  $('.tab_ul').css('display','');
+					  $('.tab_view').removeClass('on');
+					  ts = 0;
+					}
+				});
+				
+				//alert 팝업 닫기버튼
+				$('#alert .ico-popup-close').click(function(){
+					$(this).parent().parent().parent().hide();
+				});
+				
+				//최근 검색어
+				renderRecentSearchesTop();
+				getPplrWord();		//인기검색어
+			})
+			
+			function total_search(){
+				var searchTxt = $.trim($('input[id="search"]').val());
+				if(searchTxt == ''){
+					openAlertPopup('검색어를 입력해주세요');
+					$('input[id="search"]').focus()
+					return false;
+				} else {
+					$('form[id="search-form"]').submit();
+				}
+			}
+		</script>
+	</head>
+	<body>
+	
+	   <!-- 2) 커스텀 셀렉트 -->
+		<div id="skipNavi">
+		    <h1><a href="#container">본문 바로가기</a></h1>
+		    <h1><a href="#nav">주메뉴 바로가기</a></h1>
+		    <h1><a href="#footer">하단메뉴 바로가기</a></h1>
+		</div>
+		
+		<div id="wrap">
+			<!-- header -->
+			<header id="krds-header">
+				<!-- 헤더 컨텐츠 영역  -->
+				<div class="header-in">
+					<!-- 헤더 상단 기타메뉴 -->
+					<div class="header-container">
+						<div class="inner">
+							<div class="header-utility">
+								<ul class="utility-list">
+									<li class="lang_select krds-drop-wrap">
+										<i class="svg-icon ico-global"></i>
+										<!-- <label for="langSelect" class="sr-only">언어 선택</label>
+ 										 <select id="langSelect" aria-label="언어 선택">
+										  <option value="ko">한국어</option>
+										  <option value="en">English</option>
+										</select> -->
+										
+										<button type="button" class="krds-btn small text drop-btn">언어변경 <i class="svg-icon ico-toggle"></i></button>
+										<div class="drop-menu">
+											<div class="drop-in">
+												<ul class="drop-list" id="langSelect" aria-label="언어 선택">
+													<li><button class="item-link" type="button" value="ko">한국어</button></li>
+													<li><button class="item-link" type="button" value="en">English</button></li>
+												</ul>
+											</div>
+										</div>
+					                </li>
+									<li><a class="krds-btn small text"  href="/cntnt/sitemap.do">누리집안내지도</a></li>
+									<!-- resize -->
+									<li class="krds-drop-wrap krds-resize" data-adjust="scale">
+									  <button type="button" class="krds-btn small text drop-btn">화면크기 <i class="svg-icon ico-toggle"></i></button>
+									  <div class="drop-menu">
+									    <div class="drop-in">
+									      <ul class="drop-list">
+									        <li><button type="button" class="item-link sm" data-adjust-scale="sm">작게</button></li>
+									        <li><button type="button" class="item-link md active" data-adjust-scale="md">보통</button></li>
+									        <li><button type="button" class="item-link lg" data-adjust-scale="lg">조금 크게</button></li>
+									        <li><button type="button" class="item-link xlg" data-adjust-scale="xlg">크게</button></li>
+									        <li><button type="button" class="item-link xxlg" data-adjust-scale="xxlg">가장크게</button></li>
+									      </ul>
+									      <div class="drop-bottom">
+									        <button type="button" class="krds-btn medium text" data-adjust-scale="md"><i class="svg-icon ico-reset"></i> 초기화</button>
+									      </div>
+									    </div>
+									  </div>
+									</li>
+									<!-- //resize -->
+								</ul>
+							</div>
+							<div class="header-branding">
+								<h2 class="logo">
+									<a href="/index.do">
+										<img src="/images/default/main/logo.svg" alt="NCIC 국가교육과정정보센터" />
+									</a>
+								</h2>
+								<div class="header-actions">
+									<button type="button" class="btn-navi navi-row sch open-modal" title="통합검색 레이어" data-target="popTotalSch" tabindex="0">통합검색</button>
+									
+										
+											<a href="/login.do" class="btn-navi  navi-row login">로그인</a>
+											<a href="/mbr/signup/1.do" class="btn-navi navi-row join">회원가입</a>
+										
+										
+									
+									<button type="button" class="btn-navi all" aria-controls="mobile-nav">전체메뉴</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- //헤더 상단 기타메뉴 -->
+					
+				    <!-- 메인메뉴 : 데스크탑 -->
+				    <nav class="krds-main-menu">
+				      <div class="inner">
+				      	<html>
+ <head></head>
+ <body>
+  <ul class="gnb-menu">
+   <li><a href="/inv/org/list.do" class="gnb-main-trigger is-link first content109 org_list onMenu" data-trigger="gnb">우리나라 교육과정</a></li>
+   <li><a href="/inv/wldorg/list.do" class="gnb-main-trigger is-link first content121 wld_list" data-trigger="gnb">세계 교육과정</a></li>
+   <li><a href="/edu/localCurriculum/list.do" class="gnb-main-trigger is-link first content135 localCurriculum" data-trigger="gnb">지역 교육과정</a></li>
+   <li><button type="button" class="gnb-main-trigger content144 " data-trigger="gnb">교육과정 자료실</button>
+    <div class="gnb-toggle-wrap">
+     <div class="gnb-main-list">
+      <div class="gnb-sub-list single-list between">
+       <div class="gnb-sub-content">
+        <ul>
+         <li><a href="/bbs/report/list.do">국가교육과정 조사ㆍ분석ㆍ점검 결과 보고서</a></li>
+         <li><a href="/cntnt/198.do">2022 개정 교육과정 자료</a></li>
+         <li><a href="/cntnt/199.do">2015 개정 교육과정 자료</a></li>
+         <li><a href="/bbs/standard/list.do">성취수준</a></li>
+         <li><a href="/cntnt/147.do">정책 자료</a></li>
+        </ul>
+       </div>
+      </div>
+     </div>
+    </div></li>
+   <li><a href="javascript:openBlank(&quot;https://ncic.re.kr/ncrc/index.do&quot;)" class="gnb-main-trigger is-link first content213  blank" data-trigger="gnb">국가교육과정연구센터</a></li>
+   <li><button type="button" class="gnb-main-trigger content152 " data-trigger="gnb">NCIC 소개</button>
+    <div class="gnb-toggle-wrap">
+     <div class="gnb-main-list">
+      <div class="gnb-sub-list single-list between">
+       <div class="gnb-sub-content">
+        <ul>
+         <li><a href="/cntnt/153.do">NCIC란?</a></li>
+         <li><a href="/cntnt/154.do">원문&amp;표준 인벤토리란?</a></li>
+         <li><a href="/bbs/site/list.do">유용한 사이트</a></li>
+        </ul>
+       </div>
+      </div>
+     </div>
+    </div></li>
+   <li><button type="button" class="gnb-main-trigger content148 " data-trigger="gnb">안내</button>
+    <div class="gnb-toggle-wrap">
+     <div class="gnb-main-list">
+      <div class="gnb-sub-list single-list between">
+       <div class="gnb-sub-content">
+        <ul>
+         <li><a href="/bbs/ncicnotice/list.do">공지사항</a></li>
+         <li><a href="/bbs/faq/list.do">FAQ</a></li>
+         <li><a href="/cntnt/151.do">Q&amp;A</a></li>
+        </ul>
+       </div>
+      </div>
+     </div>
+    </div></li>
+  </ul>
+ </body>
+</html>
+				      </div>
+				    </nav>
+				    <!-- //메인메뉴 : 데스크탑 -->
+				</div>
+				<!-- //헤더 컨텐츠 영역  -->
+					
+	
+				<!-- 메인메뉴 : 모바일 -->
+				<div id="mobile-nav" class="krds-main-menu-mobile">
+					<div class="gnb-wrap">
+						<!-- gnb-header -->
+						<div class="gnb-header">
+							<!-- gnb-utils -->
+							<div class="gnb-utils">
+								<ul class="utility-list">
+									<li class="lang_select krds-drop-wrap">
+										<!-- 2) 커스텀 셀렉트 -->
+										<i class="svg-icon ico-global"></i>
+	 									<!-- <label for="langSelect" class="sr-only">언어 선택</label>
+										<select id="langSelect" aria-label="언어 선택">
+										  <option value="ko">한국어</option>
+										  <option value="en">English</option>
+										</select>  -->
+										
+										<button type="button" class="krds-btn small text drop-btn">언어변경<i class="svg-icon ico-toggle"></i></button>
+										<div class="drop-menu">
+											<div class="drop-in">
+												<ul class="drop-list" id="langSelect" aria-label="언어 선택">
+													<li><button class="item-link" type="button" value="ko">한국어</button></li>
+													<li><button class="item-link" type="button" value="en">English</button></li>
+												</ul>
+											</div>
+										</div>
+					                </li>
+									<li><a class="krds-btn xsmall text"  href="/cntnt/sitemap.do">누리집안내지도</a></li>
+									<!-- resize -->
+									<li class="krds-drop-wrap krds-resize" data-adjust="scale">
+									  <button type="button" class="krds-btn xsmall text drop-btn">화면크기 <i class="svg-icon ico-toggle"></i></button>
+									  <div class="drop-menu">
+									    <div class="drop-in">
+									      <ul class="drop-list">
+									        <li><button type="button" class="item-link sm" data-adjust-scale="sm">작게</button></li>
+									        <li><button type="button" class="item-link md active" data-adjust-scale="md">보통</button></li>
+									        <li><button type="button" class="item-link lg" data-adjust-scale="lg">조금 크게</button></li>
+									        <li><button type="button" class="item-link xlg" data-adjust-scale="xlg">크게</button></li>
+									        <li><button type="button" class="item-link xxlg" data-adjust-scale="xxlg">가장크게</button></li>
+									      </ul>
+									      <div class="drop-bottom">
+									        <button type="button" class="krds-btn medium text" data-adjust-scale="md"><i class="svg-icon ico-reset"></i> 초기화</button>
+									      </div>
+									    </div>
+									  </div>
+									</li>
+									<!-- //resize -->
+								</ul>
+							</div>
+							<!-- //gnb-utils -->
+							<!-- gnb-login -->
+							<div class="gnb-login">
+								
+									
+										<a href="/login.do" class="krds-btn large text"><i class="svg-icon ico-log"></i> 로그인을 해주세요</a>
+									
+									
+								
+							</div>
+							<!-- //gnb-login -->
+						</div>
+						<!-- //gnb-header -->
+						
+						<!-- gnb-body -->
+						<div class="gnb-body">
+							<html>
+ <head></head>
+ <body>
+  <div class="gnb-menu">
+   <div class="menu-wrap">
+    <ul>
+     <li><a href="#mGnb-anchor1" class="gnb-main-trigger">우리나라 교육과정</a></li>
+     <li><a href="#mGnb-anchor2" class="gnb-main-trigger">세계 교육과정</a></li>
+     <li><a href="#mGnb-anchor3" class="gnb-main-trigger">지역 교육과정</a></li>
+     <li><a href="#mGnb-anchor4" class="gnb-main-trigger">교육과정 자료실</a></li>
+     <li><a href="#mGnb-anchor5" class="gnb-main-trigger">국가교육과정연구센터</a></li>
+     <li><a href="#mGnb-anchor6" class="gnb-main-trigger">NCIC 소개</a></li>
+     <li><a href="#mGnb-anchor7" class="gnb-main-trigger">안내</a></li>
+    </ul>
+   </div>
+   <div class="submenu-wrap">
+    <div class="gnb-sub-list is-open" id="mGnb-anchor1">
+     <h2 class="sub-title"><a href="/inv/org/list.do" class="content109 org_list active">우리나라 교육과정</a></h2>
+    </div>
+    <div class="gnb-sub-list" id="mGnb-anchor2">
+     <h2 class="sub-title"><a href="/inv/wldorg/list.do" class="content121 wld_list">세계 교육과정</a></h2>
+    </div>
+    <div class="gnb-sub-list" id="mGnb-anchor3">
+     <h2 class="sub-title"><a href="/edu/localCurriculum/list.do" class="content135 localCurriculum">지역 교육과정</a></h2>
+    </div>
+    <div class="gnb-sub-list" id="mGnb-anchor4">
+     <h2 class="sub-title">교육과정 자료실</h2>
+     <ul>
+      <li><a href="/bbs/report/list.do" class="gnb-sub-trigger content220 ">국가교육과정 조사ㆍ분석ㆍ점검 결과 보고서</a></li>
+      <li><a href="#" class="gnb-sub-trigger has-depth3 content198 ">2022 개정 교육과정 자료</a>
+       <div class="depth3-wrap">
+        <ul>
+         <li><a href="/bbs/eduNotice2022/list.do" class="depth3-trigger content219 ">공지사항</a></li>
+         <li><a href="/bbs/eduSian2022/list.do" class="depth3-trigger content201 ">개정시안</a></li>
+         <li><a href="/bbs/eduRef2022/list.do" class="depth3-trigger content202 ">홍보물</a></li>
+        </ul>
+       </div></li>
+      <li><a href="#" class="gnb-sub-trigger has-depth3 content199 ">2015 개정 교육과정 자료</a>
+       <div class="depth3-wrap">
+        <ul>
+         <li><a href="/bbs/eduNotice2015/list.do" class="depth3-trigger content203 ">공지사항</a></li>
+         <li><a href="/bbs/eduSian2015/list.do" class="depth3-trigger content204 ">개정시안</a></li>
+         <li><a href="/bbs/eduRef2015/list.do" class="depth3-trigger content205 ">관련자료</a></li>
+        </ul>
+       </div></li>
+      <li><a href="/bbs/standard/list.do" class="gnb-sub-trigger content146 ">성취수준</a></li>
+      <li><a href="#" class="gnb-sub-trigger has-depth3 content147 ">정책 자료</a>
+       <div class="depth3-wrap">
+        <ul>
+         <li><a href="/bbs/raw/list.do" class="depth3-trigger content160 ">관련 법령</a></li>
+         <li><a href="/bbs/etc/list.do" class="depth3-trigger content161 ">기타 자료</a></li>
+        </ul>
+       </div></li>
+     </ul>
+    </div>
+    <div class="gnb-sub-list" id="mGnb-anchor5">
+     <h2 class="sub-title"><a href="javascript:openBlank(&quot;https://ncic.re.kr/ncrc/index.do&quot;)" class="content213  blank">국가교육과정연구센터</a></h2>
+    </div>
+    <div class="gnb-sub-list" id="mGnb-anchor6">
+     <h2 class="sub-title">NCIC 소개</h2>
+     <ul>
+      <li><a href="/cntnt/153.do" class="gnb-sub-trigger content153 ">NCIC란?</a></li>
+      <li><a href="/cntnt/154.do" class="gnb-sub-trigger content154 ">원문&amp;표준 인벤토리란?</a></li>
+      <li><a href="/bbs/site/list.do" class="gnb-sub-trigger content155 ">유용한 사이트</a></li>
+     </ul>
+    </div>
+    <div class="gnb-sub-list" id="mGnb-anchor7">
+     <h2 class="sub-title">안내</h2>
+     <ul>
+      <li><a href="/bbs/ncicnotice/list.do" class="gnb-sub-trigger content149 ">공지사항</a></li>
+      <li><a href="/bbs/faq/list.do" class="gnb-sub-trigger content150 ">FAQ</a></li>
+      <li><a href="/cntnt/151.do" class="gnb-sub-trigger content151 ">Q&amp;A</a></li>
+     </ul>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>
+						</div>
+						<!-- //gnb-body -->
+						
+						<!-- gnb-close -->
+						<button type="button" class="krds-btn medium icon" id="close-nav">
+							<span class="sr-only">전체메뉴 닫기</span>
+							<i class="svg-icon ico-popup-close"></i>
+						</button>
+						<!-- //gnb-close -->
+					</div>
+				</div>
+				<!-- //메인메뉴 : 모바일 -->
+				
+				<!-- 통합검색 팝업 -->
+				<div id="popTotalSch" class="krds-modal fade" data-type="full" aria-labelledby="tit_total_sch_type1" role="dialog">
+			      <!-- modal-dialog -->
+			      <div class="modal-dialog">
+			        <div class="modal-content">
+			          <!-- modal title -->
+			          <div class="modal-header sr-only">
+			            <h2 id="tit_total_sch_type1" class="modal-title">통합검색</h2>
+			          </div>
+			          <!-- //modal title -->
+			          <!-- modal contents -->
+			          <div class="modal-conts">
+			            <!-- 통합검색 -->
+			            <div class="pop-total-serch-wrap">
+			              <!-- 통합검색 정보입력 영역 -->
+			              <div class="search-total-top">
+			                <!-- 검색어 타이틀 -->
+			                <div class="search-tit">
+			                  <label for="search-total-input-id-type1">검색어를 입력해주세요</label>
+			                </div>
+			                <!-- //검색어 타이틀 -->
+			
+			                <!-- 검색어 입력 폼 -->
+			                <div class="sch-form-wrap vert">
+			                  <form class="sch-form-wrap vert" id="search-form" action="/srch/total_search.do" method="get" accept-charset="utf-8">
+			                  <div class="sch-input">
+			                    <input type="text" class="krds-input xlarge" name="search" id="search" placeholder="검색어 입력" >
+			                    <button type="button" onclick="total_search()" class="krds-btn icon xlarge ico-search">
+			                      <span class="sr-only">검색</span>
+			                      <i class="svg-icon ico-sch"></i>
+			                    </button>
+			                  </div>
+			                  </form>
+			                </div>
+			                <!-- //검색어 입력 폼 -->
+			              </div>
+			              <!-- //통합검색 정보입력 영역 -->
+			
+			              <!-- 검색어 리스트 -->
+			              <div class="search-text">
+			              	<ul class="sch-info-list">
+			              		<li class="li1">
+			              			<h3 class="subject">인기검색어</h3>
+			              			<div class="tab-area">
+			              				<div class="tab line full">
+	                                         <ul role="tablist">
+	                                            
+	                                             <li id="tab_search_02" role="tab" aria-selected="false" aria-controls="panel_search_01" class="active"><button type="button" class="btn-tab" onclick="click_rrpl_tabs($(this))">주간<i class="sr-only created"> 선택됨</i></button></li>
+	                                             <li id="tab_search_03" role="tab" aria-selected="false" aria-controls="panel_search_02" class=""><button type="button" class="btn-tab" onclick="click_rrpl_tabs($(this))">월간</button></li>
+	                                         </ul>
+	                                     </div>
+	                                     <div class="tab-conts-wrap">
+	                                     	<section id="panel_search_01" role="tabpanel"  class="tab-conts active">
+	                                     		<ol class="list">
+									                <li>
+									                    <a href="/srch/total_search.do?search=교육과정정보">
+									                        <span class="ranking-txt">교육과정정보</span>
+									                        <span class="ranking-state new">
+									                            <em class="sr-only">신규</em>NEW
+									                        </span>
+									                    </a>
+									                </li>
+									                <li>
+									                    <a href="/srch/total_search.do?search=학교교육개선">
+									                        <span class="ranking-txt">학교교육개선</span>
+									                        <span class="ranking-state up">
+									                            <em class="sr-only">상승</em>1
+									                        </span>
+									                    </a>
+									                </li>
+									                <li>
+									                    <a href="/srch/total_search.do?search=교육정책">
+									                        <span class="ranking-txt">교육정책</span>
+									                        <span class="ranking-state down">
+									                            <em class="sr-only">하락</em>1
+									                        </span>
+									                    </a>
+									                </li>
+									                <li>
+									                    <a href="/srch/total_search.do?search=학습자료공유">
+									                        <span class="ranking-txt">학습자료공유</span>
+									                        <span class="ranking-state same">
+									                            <em class="sr-only">동일</em>
+									                        </span>
+									                    </a>
+									                </li>
+									            </ol>
+	                                     	</section>
+	                                     	<section id="panel_search_02" role="tabpanel" aria-labelledby="tab_search_02" class="tab-conts ">
+	                                     		<ol class="list">
+									                <li>
+									                    <a href="/srch/total_search.do?search=성취기준">
+									                        <span class="ranking-txt">성취기준</span>
+									                        <span class="ranking-state new">
+									                            <em class="sr-only">신규</em>NEW
+									                        </span>
+									                    </a>
+									                </li>
+									                <li>
+									                    <a href="/srch/total_search.do?search=한국어 표준 교육과정 ksl 차이">
+									                        <span class="ranking-txt">한국어 표준 교육과정 ksl 차이</span>
+									                        <span class="ranking-state up">
+									                            <em class="sr-only">상승</em>1
+									                        </span>
+									                    </a>
+									                </li>
+									                <li>
+									                    <a href="/srch/total_search.do?search=수상안전 교육자료">
+									                        <span class="ranking-txt">수상안전 교육자료</span>
+									                        <span class="ranking-state down">
+									                            <em class="sr-only">하락</em>1
+									                        </span>
+									                    </a>
+									                </li>
+									                <li>
+									                    <a href="/srch/total_search.do?search=학교 설명회 중학교 교육연구부 발표자료">
+									                        <span class="ranking-txt">학교 설명회 중학교 교육연구부 발표자료</span>
+									                        <span class="ranking-state same">
+									                            <em class="sr-only">동일</em>
+									                        </span>
+									                    </a>
+									                </li>
+									                <li>
+									                    <a href="/srch/total_search.do?search=교육시설안전성평가">
+									                        <span class="ranking-txt">교육시설안전성평가</span>
+									                        <span class="ranking-state same">
+									                            <em class="sr-only">동일</em>
+									                        </span>
+									                    </a>
+									                </li>
+									            </ol>
+	                                     	</section>
+	                                     </div>
+			              			</div>
+			              		</li>
+			              		<li class="li2">
+			              			<h3 class="subject">최근검색어</h3>
+			              			<ol class="list" id="recentSearchWord">
+			              				<li><a href="/srch/total_search.do?search=호수"><span class="word-txt">호수</span></a>
+			              					<button class="btn svg-icon ico-delete-fill small" data-index="0"><span class="sr-only">삭제</span></button>
+			              				</li>
+			              			</ol>
+			              			<button type="button" class="btn btn-txt ico-delete-fill sm" id="delete-all" onclick="clearSearches()">최근검색어 전체 삭제</button>
+			              		</li>
+			              	</ul>   
+			              </div>
+			              <!-- //검색어 리스트 -->
+			            </div>
+			            <!-- //통합검색 -->
+			          </div>
+			          <!-- //modal contents -->
+			          <!-- close button -->
+			          <button type="button" class="krds-btn xlarge icon btn-close close-modal">
+			            <span class="sr-only">닫기</span>
+			            <i class="svg-icon ico-popup-close"></i>
+			          </button>
+			          <!-- //close button -->
+			        </div>
+			      </div>
+			      <!-- //modal-dialog -->
+			      <div class="modal-back in"></div>
+			    </div>
+			    <!-- //통합검색 팝업 -->
+			</header>
+			<!-- //header -->
+			
+			
+			<div class="org_list" id="sepration" style="background: url('/images/default/content/sub_visual05.webp') 50% 0px no-repeat;" >
+				<h2>
+	 				우리나라 교육과정
+				</h2>
+			</div>
+			
+			<div id="container">
+				<!-- side navigation -->
+				<nav class="krds-side-navigation">
+				  <h2 class="lnb-tit">우리나라 교육과정</h2>
+				  <!-- lnb-list -->
+				  <ul class="lnb-list" role="menubar">
+				  	
+				  </ul>
+				  <!-- //lnb-list -->
+				</nav>
+				<!-- //side navigation -->
+	
+				
+				<div class="contents">
+					<div id="sub_menu_title">
+						<!-- breadcrumb -->
+						<!--  <nav class="krds-breadcrumb-wrap" aria-label="현재 경로" id="breadcrumb">
+						  <ol class="breadcrumb">
+						    <li class="home"><a href="/" class="txt">홈</a></li><li><a href="/inv/org/list.do"><strong>우리나라 교육과정</strong></a></li>
+						  </ol>
+						</nav> -->
+						<!-- breadcrumb -->
+
+						<div class="page-title-wrap" data-type="responsive">
+							<h1 class="h-tit">우리나라 교육과정</h1>
+							<div class="krds-drop-wrap h-tit-drop">
+							  <button type="button" class="h-tit drop-btn" aria-expanded="false">우리나라 교육과정</button>
+							  <div class="drop-menu" style="display: none;">
+								<div class="drop-in">
+								  <ul class="drop-list">
+								  	
+								  </ul>
+								</div>
+							  </div>
+							</div>
+						</div>
+					</div>
+					<ul class="tab_ul"></ul>	<!-- 탭메뉴 미사용시 삭제 -->
+					<div class="content_body">
+						
+
+
+    
+<script>
+    $(document).ready(function(){
+    	// 즐겨찾기
+        $(document).on('click' , '.wishBtn' , function(){
+        	const $btn = $(this);
+        	const $srText = $btn.find('i.sr-only.created');
+        	
+        	var rootIdx = '';
+            var year = '';
+            var orgType = 'ogi4';
+        	var tblType = 'org';
+        	
+        	if(tblType === 'org') {
+        		rootIdx = '10069378';
+                year = '2022';
+                
+        	} else if(tblType === 'std') {
+        		rootIdx = '';
+                year = '';
+        	}
+            
+            
+            if(rootIdx != ''){
+                $.ajax({
+                    url:'/api/inv/bookmark_change.do',
+                    type:'post',
+                    dataType:'json',
+                    data:{
+                        'rootIdx': rootIdx,
+                        'orgType': orgType,
+                        'openYear': year,
+                        'tblType': tblType
+                    },
+                    success : function(rst) {
+                        const result = rst.data;
+                        if(result.code == 'success'){
+                        	if(result.status == 'on') {
+                        		$btn.addClass('on');
+                                $btn.append('<i class="sr-only created"> 선택됨</i>');
+                        	} else if(result.status == 'off') {
+                        		$btn.removeClass('on');
+                                $srText.remove(); 
+                        	}
+                        	
+                        } else {
+                        	openAlertPopup(result.msg);
+                        }
+                    },
+                    error : function(e){
+                        handleAjaxError(e);
+                    }
+                });
+            }
+        })
+    })
+    
+    // 전체다운로드
+	function total_down(){
+		// window.open('', 'downView');
+		
+		var year = '2022';
+		var degree = '1014';
+		var cls = '1002';
+		var subject = '2511';
+		var mon = '12';
+		var orgType = 'ogi4';
+		
+		$('form[name="down_form"]').find('input[name="year"]').val(year);
+		$('form[name="down_form"]').find('input[name="degree"]').val(degree);
+		$('form[name="down_form"]').find('input[name="cls"]').val(cls);
+		$('form[name="down_form"]').find('input[name="subject"]').val(subject);
+		$('form[name="down_form"]').find('input[name="mon"]').val(mon);
+		$('form[name="down_form"]').find('input[name="orgType"]').val(orgType);
+		
+		$('form[name="down_form"]').submit();
+		
+		// window.open('/inv/org/total_download.do?year=2022&degree=1014&cls=1002&subject=2511&mon=12');
+	}
+</script>
+<div class="con invView" id="eduClass">
+	<div class="community-page-title ">
+		<h3 class="tit">
+	        
+	            <span>[초등학교 5~6학년]</span>
+	        
+	    </h3>
+	
+		<button class="wishBtn "><i class="sr-only">찜하기</i></button>
+    
+    
+		<nav class="eduClass_location">
+		  <ol>
+		  	<li>2022 개정 시기 &gt; 초등학교(2022.12) &gt; 수학 &gt; 2. 내용 체계 및 성취기준 &gt; 나. 성취기준</li>
+		  </ol>
+		</nav>
+	</div>
+	<div class="community-page-area">
+
+    
+    
+        
+            <div class="boardViewContent"><p class="1" style="line-height: 170%; margin-left: 0px; text-indent: 10pt; margin-top: 0px; margin-bottom: 0px;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">(1) </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">수와 연산</span></p>
+<table style="border-collapse: collapse; table-layout: fixed; border-width: initial; border-style: none; border-color: initial;"> 
+<tbody> 
+<tr> 
+<td style="width: 551px; height: 22px; padding: 11px; border-width: 1px; border-style: dotted; border-color: rgb(0, 0, 0); vertical-align: middle;"><span style="font-family: 굴림;"> </span>
+<p class="3" style="margin-left: 67px; text-indent: -50.3pt; margin-top: 0px;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">Ⅰ.&nbsp;</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">자연수의 혼합 계산</span></p><span style="font-family: 굴림;"> </span>
+<p class="3" style="margin-left: 67px; text-indent: -50.3pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">[6</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">01-01] </span><span style="font-family: 굴림; letter-spacing: -0.7pt; font-size: 10pt;">덧셈</span><span style="font-family: 굴림; letter-spacing: -0.7pt; font-size: 10pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.7pt; font-size: 10pt;">뺄셈</span><span style="font-family: 굴림; letter-spacing: -0.7pt; font-size: 10pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.7pt; font-size: 10pt;">곱셈</span><span style="font-family: 굴림; letter-spacing: -0.7pt; font-size: 10pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.7pt; font-size: 10pt;">나눗셈의 혼합 계산에서 계산하는 순서를 알고</span><span style="font-family: 굴림; letter-spacing: -0.7pt; font-size: 10pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.7pt; font-size: 10pt;">혼합 계산을 할 수 있다</span><span style="font-family: 굴림; letter-spacing: -0.7pt; font-size: 10pt;">.</span></p><span style="font-family: 굴림;"> </span>
+<p class="3" style="margin-left: 67px; text-indent: -50.3pt; letter-spacing: -0.7pt; font-size: 10pt;"><span style="font-family: 굴림;">&nbsp;</span></p><span style="font-family: 굴림;"> </span>
+<p class="3" style="margin-left: 67px; text-indent: -50.3pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">Ⅱ.&nbsp;</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">수의 범위와 올림</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">버림</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">반올림</span></p><span style="font-family: 굴림;"> </span>
+<p class="3" style="margin-left: 68px; text-indent: -51pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">[6</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">01-02] </span><span style="font-family: 굴림; letter-spacing: 0.2pt; font-size: 10pt;">실생활과 연결하여 이상</span><span style="font-family: 굴림; letter-spacing: 0.2pt; font-size: 10pt;">, </span><span style="font-family: 굴림; letter-spacing: 0.2pt; font-size: 10pt;">이하</span><span style="font-family: 굴림; letter-spacing: 0.2pt; font-size: 10pt;">, </span><span style="font-family: 굴림; letter-spacing: 0.2pt; font-size: 10pt;">초과</span><span style="font-family: 굴림; letter-spacing: 0.2pt; font-size: 10pt;">, </span><span style="font-family: 굴림; letter-spacing: 0.2pt; font-size: 10pt;">미만의 의미와 쓰임을 알고</span><span style="font-family: 굴림; letter-spacing: 0.2pt; font-size: 10pt;">, </span><span style="font-family: 굴림; letter-spacing: 0.2pt; font-size: 10pt;">이를 활용하여 수의 범위를 나타낼 수 있다</span><span style="font-family: 굴림; letter-spacing: 0.2pt; font-size: 10pt;">.</span></p><span style="font-family: 굴림;"> </span>
+<p class="3" style="margin-left: 67px; text-indent: -50.6pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">[6</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">01-03] </span><span style="font-family: 굴림; letter-spacing: 0pt; font-size: 10pt;">어림값을 구하기 위한 방법으로 올림</span><span style="font-family: 굴림; letter-spacing: 0pt; font-size: 10pt;">, </span><span style="font-family: 굴림; letter-spacing: 0pt; font-size: 10pt;">버림</span><span style="font-family: 굴림; letter-spacing: 0pt; font-size: 10pt;">, </span><span style="font-family: 굴림; letter-spacing: 0pt; font-size: 10pt;">반올림의 의미와 필요성을 알고</span><span style="font-family: 굴림; letter-spacing: 0pt; font-size: 10pt;">, </span><span style="font-family: 굴림; letter-spacing: 0pt; font-size: 10pt;">이를 실생활에 활용함으로써 수학의 유용성을 인식할 수 있다</span><span style="font-family: 굴림; letter-spacing: 0pt; font-size: 10pt;">.</span></p><span style="font-family: 굴림;"> </span>
+<p class="3" style="margin-left: 67px; text-indent: -50.6pt; letter-spacing: 0pt; font-size: 10pt;"><span style="font-family: 굴림;">&nbsp;</span></p><span style="font-family: 굴림;"> </span>
+<p class="3" style="margin-left: 67px; text-indent: -50.3pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">Ⅲ.&nbsp;</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">약수와 배수</span></p><span style="font-family: 굴림;"> </span>
+<p class="3" style="margin-left: 67px; text-indent: -50.3pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">[6</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">01-04] </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">약수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">공약수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">최대공약수를 이해하고 구할 수 있다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">.</span></p><span style="font-family: 굴림;"> </span>
+<p class="3" style="margin-left: 67px; text-indent: -50.3pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">[6</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">01-05] </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">배수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">공배수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">최소공배수를 이해하고 구할 수 있다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">.</span></p><span style="font-family: 굴림;"> </span>
+<p class="3" style="margin-left: 67px; text-indent: -50.3pt; letter-spacing: -0.5pt; font-size: 10pt;"><span style="font-family: 굴림;">&nbsp;</span></p><span style="font-family: 굴림;"> </span>
+<p class="3" style="margin-left: 67px; text-indent: -50.3pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">Ⅳ.&nbsp;</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">분수의 덧셈과 뺄셈</span></p><span style="font-family: 굴림;"> </span>
+<p class="3" style="margin-left: 67px; text-indent: -50.3pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">[6</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">01-06] </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">크기가 같은 분수를 만드는 방법을 이해하고</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">분수를 약분</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">통분할 수 있다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">.</span></p><span style="font-family: 굴림;"> </span>
+<p class="3" style="margin-left: 67px; text-indent: -50.3pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">[6</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">01-07] </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">분모가 다른 분수의 크기를 비교하고 그 방법을 설명할 수 있다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">.</span></p><span style="font-family: 굴림;"> </span>
+<p class="3" style="margin-left: 67px; text-indent: -50.3pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">[6</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">01-08] </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">분모가 다른 분수의 덧셈과 뺄셈의 계산 원리를 탐구하고 그 계산을 할 수 있다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">.</span></p><span style="font-family: 굴림;"> </span>
+<p class="3" style="margin-left: 67px; text-indent: -50.3pt; letter-spacing: -0.5pt; font-size: 10pt;"><span style="font-family: 굴림;">&nbsp;</span></p><span style="font-family: 굴림;"> </span>
+<p class="3" style="margin-left: 67px; text-indent: -50.3pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">Ⅴ.&nbsp;</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">분수의 곱셈과 나눗셈</span></p><span style="font-family: 굴림;"> </span>
+<p class="3" style="margin-left: 67px; text-indent: -50.3pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">[6</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">01-09] </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">분수의 곱셈의 계산 원리를 탐구하고 그 계산을 할 수 있다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">.</span></p><span style="font-family: 굴림;"> </span>
+<p class="3" style="margin-left: 67px; text-indent: -50.3pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">[6</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">01-10] &lsquo;(</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">자연수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">)</span><span style="font-family: 굴림;">&nbsp;&divide; </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">(</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">자연수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">)&rsquo;</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">에서 나눗셈의 몫을 분수로 나타낼 수 있다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">. </span></p><span style="font-family: 굴림;"> </span>
+<p class="3" style="margin-left: 67px; text-indent: -50.3pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">[6</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">01-11] </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">분수의 나눗셈의 계산 원리를 탐구하고 그 계산을 할 수 있다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">.</span></p><span style="font-family: 굴림;"> </span>
+<p class="3" style="margin-left: 67px; text-indent: -50.3pt; letter-spacing: -0.5pt; font-size: 10pt;"><span style="font-family: 굴림;">&nbsp;</span></p><span style="font-family: 굴림;"> </span>
+<p class="3" style="margin-left: 67px; text-indent: -50.3pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">Ⅵ.&nbsp;</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">분수와 소수의 관계</span></p><span style="font-family: 굴림;"> </span>
+<p class="3" style="margin-left: 67px; text-indent: -50.3pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">[6</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">01-12] </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">분수와 소수의 관계를 이해하고 크기를 비교하며 그 방법을 설명할 수 있다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">.</span></p><span style="font-family: 굴림;"> </span>
+<p class="3" style="margin-left: 67px; text-indent: -50.3pt; letter-spacing: -0.5pt; font-size: 10pt;"><span style="font-family: 굴림;">&nbsp;</span></p><span style="font-family: 굴림;"> </span>
+<p class="3" style="margin-left: 67px; text-indent: -50.3pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">Ⅶ.&nbsp;</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">소수의 곱셈과 나눗셈</span></p><span style="font-family: 굴림;"> </span>
+<p class="3" style="margin-left: 67px; text-indent: -50.3pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">[6</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">01-13] </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">소수의 곱셈의 계산 원리를 탐구하고 그 계산을 할 수 있다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">.</span></p><span style="font-family: 굴림;"> </span>
+<p class="3" style="margin-left: 67px; text-indent: -50.3pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">[6</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">01-14] &lsquo;(</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">자연수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">)</span><span style="font-family: 굴림;">&nbsp;&divide;&nbsp;</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">(</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">자연수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">)&rsquo;</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">에서 나눗셈의 몫을 소수로 나타낼 수 있다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">.</span></p><span style="font-family: 굴림;"> </span>
+<p class="3" style="margin-left: 67px; text-indent: -50.3pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">[6</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">01-15] </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">소수의 나눗셈의 계산 원리를 탐구하고 그 계산을 할 수 있다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10pt;">.</span></p></td> 
+</tr> 
+</tbody> 
+</table>
+<p><span style="font-family: 굴림;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">(<span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">가</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">) </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">성취기준 해설</span></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 10.5pt;">[6</span><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 10.5pt;">수</span><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 10.5pt;">01-11] </span><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 10.5pt;">분수의 나눗셈은 </span><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 10.5pt;">&lsquo;(</span><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 10.5pt;">분수</span><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 10.5pt;">)</span><span style="font-size: 10pt; font-family: 굴림;">&nbsp;&divide;&nbsp;</span><span style="font-size: 10pt;"></span><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 10.5pt;">(</span><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 10.5pt;">자연수</span><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 10.5pt;">)&rsquo;, &lsquo;(</span><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 10.5pt;">자연수</span><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 10.5pt;">)</span><span style="font-size: 10pt; font-family: 굴림;">&nbsp;&divide;&nbsp;</span><span style="font-size: 10pt;"></span><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 10.5pt;">(</span><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 10.5pt;">분수</span><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 10.5pt;">)&rsquo;, &lsquo;(</span><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 10.5pt;">분수</span><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 10.5pt;">)</span><span style="font-size: 10pt; font-family: 굴림;">&nbsp;&divide;&nbsp;</span><span style="font-size: 10pt;"></span><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 10.5pt;">(</span><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 10.5pt;">분수</span><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 10.5pt;">)&rsquo;</span><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 10.5pt;">를 다룬다</span><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 10.5pt;">[6</span><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 10.5pt;">수</span><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 10.5pt;">01-15] </span><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 10.5pt;">소수의 나눗셈은 </span><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 10.5pt;">&lsquo;(</span><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 10.5pt;">소수</span><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 10.5pt;">)</span><span style="font-size: 10pt; font-family: 굴림;">&nbsp;&divide;&nbsp;</span><span style="font-size: 10pt;"></span><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 10.5pt;">(</span><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 10.5pt;">자연수</span><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 10.5pt;">)&rsquo;, &lsquo;(</span><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 10.5pt;">자연수</span><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 10.5pt;">)</span><span style="font-size: 10pt; font-family: 굴림;">&nbsp;&divide;&nbsp;</span><span style="font-size: 10pt;"></span><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 10.5pt;">(</span><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 10.5pt;">소수</span><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 10.5pt;">)&rsquo;, &lsquo;(</span><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 10.5pt;">소수</span><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 10.5pt;">)</span><span style="font-size: 10pt; font-family: 굴림;">&nbsp;&divide;&nbsp;</span><span style="font-size: 10pt;"></span><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 10.5pt;">(</span><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 10.5pt;">소수</span><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 10.5pt;">)&rsquo;</span><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 10.5pt;">를 다룬다</span><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">(</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">나</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">) </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">성취기준 적용 시 고려 사항</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">&lsquo;</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">수와 연산</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">&rsquo; </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">영역에서는 용어와 기호로 </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">&lsquo;</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">이상</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">이하</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">초과</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">미만</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">올림</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">버림</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">반올림</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">약수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">공약수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">최대공약수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">배수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">공배수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">최소공배수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">약분</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">통분</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">기약분수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">&rsquo;</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">를 다룬다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 10.5pt;">자연수의 혼합 계산은 계산 순서에 중점을 두고</span><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 10.5pt;">지나치게 복잡한 혼합 계산은 다루지 않는다</span><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">수의 범위와 올림</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">버림</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">반올림은 측정 상황과 같이 수나 양의 어림이 필요한 여러 가지 실생활 사례를 통하여 그 의미를 알게 한다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">약수와 배수는 실생활에서 활용되는 경우를 찾아 자연수 범위에서 다룬다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">약수와 배수를 학습하는 과정에서 약수와 배수의 관계를 이해하게 한다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">최대공약수와 최소공배수는 두 수에 대하여 약수와 배수를 각각 나열하여 공통된 약수와 배수를 찾는 방법으로 그 의미를 이해하게 하고</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">평가에서 소인수의 곱으로 나타내어 구하는 방법은 다루지 않는다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">구체물이나 그림 등을 이용하여 크기가 같은 분수를 만든 후 분모는 분모끼리</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">분자는 분자끼리 비교하는 활동을 통해 크기가 같은 분수를 만드는 방법을 이해하게 한다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">분모가 다른 분수의 크기를 비교할 때 수 감각을 이용하여 추론하고 토론하는 활동을 하게 한다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">분수의 사칙계산에서 기약분수로 나타낼 것을 요구하지 않을 경우</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">계산 결과를 기약분수가 아닌 분수로 나타내는 것도 허용한다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">분수를 통분할 때는 공통분모로 최소공배수뿐만 아니라 분모의 곱과 같은 공배수도 이용하게 할 수 있다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">분수의 곱셈과 나눗셈</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">소수의 곱셈과 나눗셈은 계산 원리를 탐구하여 이해하는 수준에서 다룬다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">소수의 곱셈과 나눗셈에서 복잡한 계산은 계산기를 사용하게 할 수 있다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">소수의 곱셈과 나눗셈에서 계산 결과를 어림할 필요가 있는 상황</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">정확한 계산 대신에 어림셈으로 비교가 가능한 상황 등 어림셈이 필요한 여러 가지 실생활 상황을 제시하여 어림셈의 필요성과 유용성을 알게 한다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">&lsquo;</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">수와 연산</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">&rsquo; </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">영역의 문제 상황에서 문제해결 전략 비교하기</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">주어진 문제에서 필요 없는 정보나 부족한 정보 찾기</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">조건을 바꾸어 새로운 문제 만들기</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">문제해결 과정의 타당성 검토하기 등을 통하여 문제해결 역량을 기르게 한다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">&lsquo;</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">수와 연산</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">&rsquo; </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">영역에서 자신의 문제해결 과정을 논리적으로 설명하고 다른 친구의 문제해결 과정과 비교함으로써 비판적으로 사고하는 태도를 기르게 한다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="text-indent: 10pt; font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="text-indent: 10pt; font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">(2) </span><span style="text-indent: 10pt; font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">변화와 관계</span></p>
+<table style="border-collapse: collapse; table-layout: fixed; border-width: initial; border-style: none; border-color: initial;"> 
+<tbody> 
+<tr> 
+<td style="width: 551px; height: 96px; padding: 11px; border-width: 1px; border-style: dotted; border-color: rgb(0, 0, 0); vertical-align: middle;"><span style="font-family: 굴림;"> </span>
+<p class="3" style="margin-left: 67px; text-indent: -50.3pt; margin-top: 0px;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">Ⅰ.&nbsp;</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">대응 관계 </span></p><span style="font-size: 12pt; font-family: 굴림;"> </span><span style="font-family: 굴림;"> </span>
+<p class="3" style="margin-left: 67px; text-indent: -50.7pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">[6</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">02-01] </span><span style="font-family: 굴림; letter-spacing: -0.4pt; font-size: 12pt;">한 양이 변할 때 다른 양이 그에 종속하여 변하는 대응 관계를 나타낸 표에서 규칙을</span><span style="font-family: 굴림; letter-spacing: 0pt; font-size: 12pt;"> </span><span style="font-family: 굴림; letter-spacing: 0pt; font-size: 12pt;">찾아 </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">설명하고</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">□</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">△ </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">등을 사용하여 식으로 나타낼 수 있다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">.</span></p><span style="font-size: 12pt; font-family: 굴림;"> </span><span style="font-family: 굴림;"> </span>
+<p class="3" style="margin-left: 67px; text-indent: -50.7pt; letter-spacing: -0.5pt; font-size: 10pt;"><span style="font-size: 12pt; font-family: 굴림;">&nbsp;</span></p><span style="font-size: 12pt; font-family: 굴림;"> </span><span style="font-family: 굴림;"> </span>
+<p class="3" style="margin-left: 67px; text-indent: -50.3pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">Ⅱ.&nbsp;</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">비와 비율</span></p><span style="font-size: 12pt; font-family: 굴림;"> </span><span style="font-family: 굴림;"> </span>
+<p class="3" style="margin-left: 67px; text-indent: -50.9pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">[6</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">02-02] </span><span style="font-family: 굴림; letter-spacing: -0.1pt; font-size: 12pt;">두 양의 크기를 비교하는 상황을 통해 비의 개념을 이해하고</span><span style="font-family: 굴림; letter-spacing: -0.1pt; font-size: 12pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.1pt; font-size: 12pt;">두 양의 관계를 비로</span><span style="font-family: 굴림; letter-spacing: 0pt; font-size: 12pt;"> </span><span style="font-family: 굴림; letter-spacing: 0pt; font-size: 12pt;">나타낼</span><span style="font-family: 굴림; letter-spacing: 0.1pt; font-size: 12pt;"> </span><span style="font-family: 굴림; letter-spacing: 0.1pt; font-size: 12pt;">수 있다</span><span style="font-family: 굴림; letter-spacing: 0.1pt; font-size: 12pt;">. </span></p><span style="font-size: 12pt; font-family: 굴림;"> </span><span style="font-family: 굴림;"> </span>
+<p class="3" style="margin-left: 67px; text-indent: -50.3pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">[6</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">02-03] </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">비율을 이해하고</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">비율을 분수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">소수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">백분율로 나타낼 수 있다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">.</span></p><span style="font-size: 12pt; font-family: 굴림;"> </span><span style="font-family: 굴림;"> </span>
+<p class="3" style="margin-left: 67px; text-indent: -50.3pt; letter-spacing: -0.5pt; font-size: 10pt;"><span style="font-size: 12pt; font-family: 굴림;">&nbsp;</span></p><span style="font-size: 12pt; font-family: 굴림;"> </span><span style="font-family: 굴림;"> </span>
+<p class="3" style="margin-left: 67px; text-indent: -50.3pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">Ⅲ.&nbsp;</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">비례식과 비례배분</span></p><span style="font-size: 12pt; font-family: 굴림;"> </span><span style="font-family: 굴림;"> </span>
+<p class="3" style="margin-left: 68px; text-indent: -51pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">[6</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">02-04] </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">비례식을 알고</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">그 성질을 이해하며</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">이를 활용하여 간단한 비례식을 풀 수 있다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">.</span></p><span style="font-size: 12pt; font-family: 굴림;"> </span><span style="font-family: 굴림;"> </span>
+<p class="3" style="margin-left: 68px; text-indent: -51pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">[6</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">02-05] </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">비례배분을 알고</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">주어진 양을 비례배분 할 수 있다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">.</span></p></td> 
+</tr> 
+</tbody> 
+</table>
+<p><span style="font-family: 굴림;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">(<span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">가</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">) </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">성취기준 해설</span></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">[6</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">02-02] </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">두 양을 비교할 때는 한 양을 기준으로 다른 양이 몇 배가 되는지를 나타낼 필요성을 인식하면서 비의 개념을 이해하게 한다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">(</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">나</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">) </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">성취기준 적용 시 고려 사항</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">&lsquo;</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">변화와 관계</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">&rsquo; </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">영역에서는 용어와 기호로 </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">&lsquo;</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">비</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">기준량</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">비교하는 양</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">비율</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">백분율</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">비례식</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">비례배분</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, :, %&rsquo;</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">를 다룬다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">대응 관계를 탐구할 때는 두 양의 변화를 함께 고려하게 하고</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">한 양의 변화에만 초점을 두지 않는다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">두 양 사이의 대응 관계를 식으로 나타내는 방법을 지도하는 활동에서는 덧셈식</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">뺄셈식</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">곱셈식</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">나눗셈식 중 하나로 표현되는 간단한 경우만 다룬다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">비와 비율을 다룰 때는 기준량과 비교하는 양을 명확하게 인식하게 한다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">비와 비율을 탐구할 때는 실생활 및 타 교과에서 비와 비율이 적용되는 간단한 사례를 활용하며 수학의 유용성을 인식하게 한다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">동일한 비율을 분수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">소수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">백분율로 다양하게 나타낼 수 있음을 알게 한다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">대응 관계를 기호를 사용하여 식으로 나타내고 두 양의 관계를 비로 나타내 보는 경험을 통해 수학적 표현의 편리함을 인식하게 할 수 있다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">&lsquo;</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">변화와 관계</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">&rsquo; </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">영역에서는 기후변화</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">생태계</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">과학 기술의 발전 등 학생의 삶과 관련된 다양한 문제 상황을 활용할 수 있다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">&lsquo;</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">변화와 관계</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">&rsquo; </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">영역의 문제 상황에서 문제해결 전략 비교하기</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">주어진 문제에서 필요 없는 정보나 부족한 정보 찾기</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">조건을 바꾸어 새로운 문제 만들기</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">문제해결 과정의 타당성 검토하기 등을 통하여 문제해결 역량을 기르게 한다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">&lsquo;</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">변화와 관계</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">&rsquo; </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">영역에서 자신의 문제해결 과정을 논리적으로 설명하고 다른 친구의 문제해결 과정과 비교함으로써 비판적으로 사고하는 태도를 기르게 한다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="text-indent: 13.3333px; font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">(3)&nbsp;</span><span style="text-indent: 13.3333px; font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">도형과 측정</span></p>
+<table style="border-collapse: collapse; table-layout: fixed; border-width: initial; border-style: none; border-color: initial;"> 
+<tbody> 
+<tr> 
+<td style="width: 551px; height: 22px; padding: 11px; border-width: 1px; border-style: dotted; border-color: rgb(0, 0, 0); vertical-align: middle;"><span style="font-family: 굴림;"> </span>
+<p class="2" style="margin-left: 67px; text-indent: -50.3pt; margin-top: 0px;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">Ⅰ.&nbsp;</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">합동과 대칭</span></p><span style="font-size: 12pt; font-family: 굴림;"> </span><span style="font-family: 굴림;"> </span>
+<p class="2" style="margin-left: 67px; text-indent: -50.3pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">[6</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">03-01] </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">도형의 합동을 이해하고</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">합동인 도형의 성질을 탐구하고 설명할 수 있다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">.</span></p><span style="font-size: 12pt; font-family: 굴림;"> </span><span style="font-family: 굴림;"> </span>
+<p class="2" style="margin-left: 67px; text-indent: -50.3pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">[6</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">03-02] </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">실생활과 연결하여 선대칭도형과 점대칭도형을 이해하고 그릴 수 있다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">. </span></p><span style="font-size: 12pt; font-family: 굴림;"> </span><span style="font-family: 굴림;"> </span>
+<p class="2" style="margin-left: 67px; text-indent: -50.3pt; letter-spacing: -0.5pt; font-size: 10pt;"><span style="font-size: 12pt; font-family: 굴림;">&nbsp;</span></p><span style="font-size: 12pt; font-family: 굴림;"> </span><span style="font-family: 굴림;"> </span>
+<p class="2" style="margin-left: 67px; text-indent: -50.3pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">Ⅱ.&nbsp;</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">직육면체와 정육면체</span></p><span style="font-size: 12pt; font-family: 굴림;"> </span><span style="font-family: 굴림;"> </span>
+<p class="2" style="margin-left: 67px; text-indent: -50.3pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">[6</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">03-03] </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">직육면체와 정육면체를 이해하고</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">구성 요소와 성질을 탐구하고 설명할 수 있다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">.</span></p><span style="font-size: 12pt; font-family: 굴림;"> </span><span style="font-family: 굴림;"> </span>
+<p class="2" style="margin-left: 67px; text-indent: -50.3pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">[6</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">03-04] </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">직육면체와 정육면체의 겨냥도와 전개도를 그릴 수 있다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">.</span></p><span style="font-size: 12pt; font-family: 굴림;"> </span><span style="font-family: 굴림;"> </span>
+<p class="2" style="margin-left: 67px; text-indent: -50.3pt; letter-spacing: -0.5pt; font-size: 10pt;"><span style="font-size: 12pt; font-family: 굴림;">&nbsp;</span></p><span style="font-size: 12pt; font-family: 굴림;"> </span><span style="font-family: 굴림;"> </span>
+<p class="2" style="margin-left: 67px; text-indent: -50.3pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">Ⅲ.&nbsp;</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">각기둥과 각뿔</span></p><span style="font-size: 12pt; font-family: 굴림;"> </span><span style="font-family: 굴림;"> </span>
+<p class="2" style="margin-left: 67px; text-indent: -50.3pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">[6</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">03-05] </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">각기둥과 각뿔을 이해하고</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">구성 요소와 성질을 탐구하고 설명할 수 있다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">.</span></p><span style="font-size: 12pt; font-family: 굴림;"> </span><span style="font-family: 굴림;"> </span>
+<p class="2" style="margin-left: 67px; text-indent: -50.3pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">[6</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">03-06] </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">각기둥의 전개도를 그릴 수 있다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">.</span></p><span style="font-size: 12pt; font-family: 굴림;"> </span><span style="font-family: 굴림;"> </span>
+<p class="2" style="margin-left: 67px; text-indent: -50.3pt; letter-spacing: -0.5pt; font-size: 10pt;"><span style="font-size: 12pt; font-family: 굴림;">&nbsp;</span></p><span style="font-size: 12pt; font-family: 굴림;"> </span><span style="font-family: 굴림;"> </span>
+<p class="2" style="margin-left: 67px; text-indent: -50.3pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">Ⅳ.&nbsp;</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">원기둥</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">원뿔</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">구</span></p><span style="font-size: 12pt; font-family: 굴림;"> </span><span style="font-family: 굴림;"> </span>
+<p class="2" style="margin-left: 67px; text-indent: -50.3pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">[6</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">03-07] </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">원기둥</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">원뿔</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">구를 이해하고</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">구성 요소와 성질을 탐구하고 설명할 수 있다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">.</span></p><span style="font-size: 12pt; font-family: 굴림;"> </span><span style="font-family: 굴림;"> </span>
+<p class="2" style="margin-left: 67px; text-indent: -50.3pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">[6</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">03-08] </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">원기둥의 전개도를 그릴 수 있다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">.</span></p><span style="font-size: 12pt; font-family: 굴림;"> </span><span style="font-family: 굴림;"> </span>
+<p class="2" style="margin-left: 67px; text-indent: -50.3pt; letter-spacing: -0.5pt; font-size: 10pt;"><span style="font-size: 12pt; font-family: 굴림;">&nbsp;</span></p><span style="font-size: 12pt; font-family: 굴림;"> </span><span style="font-family: 굴림;"> </span>
+<p class="2" style="margin-left: 67px; text-indent: -50.3pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">Ⅴ.&nbsp;</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">입체도형의 공간 감각</span></p><span style="font-size: 12pt; font-family: 굴림;"> </span><span style="font-family: 굴림;"> </span>
+<p class="2" style="margin-left: 67px; text-indent: -50.3pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">[6</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">03-09] </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">쌓기나무로 만든 입체도형을 보고 사용된 쌓기나무의 개수를 구할 수 있다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">.</span></p><span style="font-size: 12pt; font-family: 굴림;"> </span><span style="font-family: 굴림;"> </span>
+<p class="2" style="margin-left: 67px; text-indent: -50.6pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">[6</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">03-10] </span><span style="font-family: 굴림; letter-spacing: -0.4pt; font-size: 12pt;">쌓기나무로 만든 입체도형의 위</span><span style="font-family: 굴림; letter-spacing: -0.4pt; font-size: 12pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.4pt; font-size: 12pt;">앞</span><span style="font-family: 굴림; letter-spacing: -0.4pt; font-size: 12pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.4pt; font-size: 12pt;">옆에서 본 모양을 표현할 수 있고</span><span style="font-family: 굴림; letter-spacing: -0.4pt; font-size: 12pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.4pt; font-size: 12pt;">이러한 표현을 </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">보고 입체도형의 모양을 추측할 수 있다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">.</span></p><span style="font-size: 12pt; font-family: 굴림;"> </span><span style="font-family: 굴림;"> </span>
+<p class="2" style="margin-left: 67px; text-indent: -50.6pt; letter-spacing: -0.5pt; font-size: 10pt;"><span style="font-size: 12pt; font-family: 굴림;">&nbsp;</span></p><span style="font-size: 12pt; font-family: 굴림;"> </span><span style="font-family: 굴림;"> </span>
+<p class="2" style="margin-left: 67px; text-indent: -50.3pt; margin-top: 0px;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">Ⅵ.&nbsp;</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">다각형의 둘레와 넓이</span></p><span style="font-size: 12pt; font-family: 굴림;"> </span><span style="font-family: 굴림;"> </span>
+<p class="2" style="margin-left: 67px; text-indent: -50.3pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">[6</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">03-11] </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">평면도형의 둘레를 이해하고</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">기본적인 평면도형의 둘레를 구할 수 있다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">.</span></p><span style="font-size: 12pt; font-family: 굴림;"> </span><span style="font-family: 굴림;"> </span>
+<p class="2" style="margin-left: 67px; text-indent: -50.3pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">[6</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">03-12] </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">넓이 단위 </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">1cm&sup2;, 1m&sup2;, 1km&sup2;</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">를 알며</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">그 관계를 이해한다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">. </span></p><span style="font-size: 12pt; font-family: 굴림;"> </span><span style="font-family: 굴림;"> </span>
+<p class="2" style="margin-left: 67px; text-indent: -50.3pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">[6</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">03-13] </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">직사각형과 정사각형의 넓이를 구하는 방법을 이해하고</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">이를 구할 수 있다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">. </span></p><span style="font-size: 12pt; font-family: 굴림;"> </span><span style="font-family: 굴림;"> </span>
+<p class="2" style="margin-left: 67px; text-indent: -50.7pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">[6</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">03-14] </span><span style="font-family: 굴림; letter-spacing: -0.1pt; font-size: 12pt;">평행사변형</span><span style="font-family: 굴림; letter-spacing: -0.1pt; font-size: 12pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.1pt; font-size: 12pt;">삼각형</span><span style="font-family: 굴림; letter-spacing: -0.1pt; font-size: 12pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.1pt; font-size: 12pt;">사다리꼴</span><span style="font-family: 굴림; letter-spacing: -0.1pt; font-size: 12pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.1pt; font-size: 12pt;">마름모의 넓이를 구하는 방법을 다양하게 추론하고</span><span style="font-family: 굴림; letter-spacing: 0pt; font-size: 12pt;">, </span><span style="font-family: 굴림; letter-spacing: 0pt; font-size: 12pt;">이와</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;"> </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">관련된 문제를 해결할 수 있다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">.</span></p><span style="font-size: 12pt; font-family: 굴림;"> </span><span style="font-family: 굴림;"> </span>
+<p class="2" style="margin-left: 67px; text-indent: -50.7pt; letter-spacing: -0.5pt; font-size: 10pt;"><span style="font-size: 12pt; font-family: 굴림;">&nbsp;</span></p><span style="font-size: 12pt; font-family: 굴림;"> </span><span style="font-family: 굴림;"> </span>
+<p class="2" style="margin-left: 67px; text-indent: -50.3pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">Ⅶ.&nbsp;</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">원주율과 원의 넓이</span></p><span style="font-size: 12pt; font-family: 굴림;"> </span><span style="font-family: 굴림;"> </span>
+<p class="2" style="margin-left: 67px; text-indent: -50.6pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">[6</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">03-15] </span><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 12pt;">여러 가지 원 모양 물체의 원주와 지름을 측정하는 활동을 통하여</span><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 12pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 12pt;">원주율이 일정한</span><span style="font-family: 굴림; letter-spacing: -0.6pt; font-size: 12pt;"> </span><span style="font-family: 굴림; letter-spacing: -0.6pt; font-size: 12pt;">값임을</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;"> </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">알고 그 근삿값을 사용할 수 있다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">.</span></p><span style="font-size: 12pt; font-family: 굴림;"> </span><span style="font-family: 굴림;"> </span>
+<p class="2" style="margin-left: 67px; text-indent: -50.3pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">[6</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">03-16] </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">원주와 원의 넓이를 구하는 방법을 이해하고</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">이를 구할 수 있다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">.</span></p><span style="font-size: 12pt; font-family: 굴림;"> </span><span style="font-family: 굴림;"> </span>
+<p class="2" style="margin-left: 67px; text-indent: -50.3pt; letter-spacing: -0.5pt; font-size: 10pt;"><span style="font-size: 12pt; font-family: 굴림;">&nbsp;</span></p><span style="font-size: 12pt; font-family: 굴림;"> </span><span style="font-family: 굴림;"> </span>
+<p class="2" style="margin-left: 67px; text-indent: -50.3pt; margin-top: 0px;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">Ⅷ.&nbsp;</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">입체도형의 겉넓이와 부피</span></p><span style="font-size: 12pt; font-family: 굴림;"> </span><span style="font-family: 굴림;"> </span>
+<p class="2" style="margin-left: 67px; text-indent: -50.3pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">[6</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">03-17] </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">직육면체와 정육면체의 겉넓이를 구하는 방법을 이해하고</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">이를 구할 수 있다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">. </span></p><span style="font-size: 12pt; font-family: 굴림;"> </span><span style="font-family: 굴림;"> </span>
+<p class="2" style="margin-left: 67px; text-indent: -50.3pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">[6</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">03-18] </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">부피 단위 </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">1cm&sup3;, 1m&sup3;</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">를 알며</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">그 관계를 이해한다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">.</span></p><span style="font-size: 12pt; font-family: 굴림;"> </span><span style="font-family: 굴림;"> </span>
+<p class="2" style="margin-left: 67px; text-indent: -50.3pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">[6</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">03-19] </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">직육면체와 정육면체의 부피를 구하는 방법을 이해하고</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">이를 구할 수 있다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;"><span style="font-size: 12pt; font-family: 굴림;">.</span> </span></p></td> 
+</tr> 
+</tbody> 
+</table>
+<p><span style="font-family: 굴림;"><br></span></p>
+<p><span style="letter-spacing: -0.5pt; text-indent: 10pt; font-family: 굴림; font-size: 10.5pt;">(<span style="letter-spacing: -0.5pt; text-indent: 10pt; font-family: 굴림; font-size: 10.5pt;">가</span><span style="letter-spacing: -0.5pt; text-indent: 10pt; font-family: 굴림; font-size: 10.5pt;">) </span><span style="letter-spacing: -0.5pt; text-indent: 10pt; font-family: 굴림; font-size: 10.5pt;">성취기준 해설</span></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">[6</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">03-01] </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">합동인 두 도형에서 대응점</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">대응변</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">대응각을 각각 찾게 하고 대응변의 길이와 대응각의 크기를 비교하는 활동을 통해 합동인 도형의 성질을 탐구하고 설명하게 한다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.7pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.7pt; font-size: 10.5pt;">[6</span><span style="font-family: 굴림; letter-spacing: -0.7pt; font-size: 10.5pt;">수</span><span style="font-family: 굴림; letter-spacing: -0.7pt; font-size: 10.5pt;">03-10] </span><span style="font-family: 굴림; letter-spacing: -0.7pt; font-size: 10.5pt;">여러 가지 물체</span><span style="font-family: 굴림; letter-spacing: -0.7pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.7pt; font-size: 10.5pt;">건축물</span><span style="font-family: 굴림; letter-spacing: -0.7pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.7pt; font-size: 10.5pt;">예술품</span><span style="font-family: 굴림; letter-spacing: -0.7pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.7pt; font-size: 10.5pt;">쌓기나무로 만든 입체도형 등의 위</span><span style="font-family: 굴림; letter-spacing: -0.7pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.7pt; font-size: 10.5pt;">앞</span><span style="font-family: 굴림; letter-spacing: -0.7pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.7pt; font-size: 10.5pt;">옆에서 </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">본 모양을 이용해서 전체 모양을 추측하게 하고</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">이에 대해 자신의 추론 과정을 설명하게 한다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">[6</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">03-15] </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">여러 가지 원에서 </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">(</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">원주</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">)</span><span style="font-size: 10pt; font-family: 굴림;">&nbsp;&divide;&nbsp;</span><span style="font-size: 10pt;"></span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">(</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">지름</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">)</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">의 값을 구하여 모든 원에서 원주율이 일정함을 이해하게 하고</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">원주율의 근삿값으로 </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">3.14</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">를 사용하게 한다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">[6</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">03-16] </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">지름과 원주율을 이용하면 원주를 직접 측정하지 않고도 구할 수 있음을 알게 </span><span style="font-family: 굴림; letter-spacing: -0.7pt; font-size: 10.5pt;">하고</span><span style="font-family: 굴림; letter-spacing: -0.7pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.7pt; font-size: 10.5pt;">직사각형의 넓이를 구하는 방법을 이용하여 원의 넓이를 구하는 방법을 이해하게 한다</span><span style="font-family: 굴림; letter-spacing: -0.7pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">(</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">나</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">) </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">성취기준 적용 시 고려 사항</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">&lsquo;</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">도형과 측정</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">&rsquo; </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">영역에서는 용어와 기호로 </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">&lsquo;</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">합동</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">대칭</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">대응점</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">대응변</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">대응각</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">선대칭도형</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">점대칭도형</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">대칭축</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">대칭의 중심</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">직육면체</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">정육면체</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">면</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">모서리</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">밑면</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">옆면</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">겨냥도</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">전개도</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">각기둥</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">각뿔</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">원기둥</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">원뿔</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">구</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">모선</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">가로</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">세로</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">밑변</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">높이</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">원주</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">원주율</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, cm&sup2;, m&sup2;, km&sup2;, cm&sup3;, m&sup3;&rsquo;</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">를 다룬다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">선대칭도형과 점대칭도형 그리기를 평가할 때 모눈종이</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">점판</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">공학 도구 등을 이용하여 쉽게 그릴 수 있게 한다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">무늬 찾기</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">종이 겹쳐 오리기</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">도장 찍기</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">데칼코마니 등 구체적인 조작 활동을 통하여 도형의 합동의 의미를 알게 한다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">실생활이나 자연 환경 등에서 도형의 합동</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">선대칭도형</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">점대칭도형의 예를 찾고 수학의 아름다움을 느낄 수 있게 한다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">입체도형의 전개도에 대한 평가는 전개도가 될 수 있는 것과 될 수 없는 것을 구별하는 데 중점을 둔다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">각기둥의 전개도는 간단한 형태만 다루고</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">각뿔과 원뿔의 전개도는 다루지 않는다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">한 직선을 중심으로 직사각형</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">직각삼각형</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">반원을 돌리는 활동을 통하여 원기둥</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">원뿔</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">구를 만들어 보게 한다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">실생활에서 접할 수 있는 여러 가지 물건</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">건축물 등에서 직육면체</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">정육면체</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">각기둥</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">각뿔</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">원기둥</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">원뿔</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">구를 찾고 수학에 대한 흥미와 관심을 갖게 한다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">입체도형의 구성 요소와 성질</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">전개도</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">쌓기나무로 만든 입체도형을 탐구할 때는 여러 가지 모형과 공학 도구를 이용하게 할 수 있다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">쌓기나무로 만든 입체도형의 위</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">앞</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">옆에서 본 모양에 대한 평가를 할 때는 간단한 모양을 이용한다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">삼각형의 넓이를 구할 때는 높이가 삼각형의 외부에 있는 것도 다룬다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">넓이 단위 사이의 관계 중 </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">1cm&sup2;, 1km&sup2; </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">사이의 단위 환산은 다루지 않는다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">도형의 넓이는 </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">1cm&sup2;</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">인 정사각형의 몇 배인지를 구하는 것임을 이해하게 하고</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">도형의 변형을 이용하여 넓이를 구하는 여러 가지 방법을 추론하게 한다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">원주율을 지도할 때는 원주와 지름의 관계를 이해하고 원주율에 대한 양감을 기르게 한다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">원주율</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">원주</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">원의 넓이</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">입체도형의 겉넓이와 부피 등을 구할 때 복잡한 계산은 계산기를 사용하게 한다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">겉넓이와 부피를 구하는 방법에 대하여 다양한 추론을 하게 하고</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">자신의 추론 과정을 다른 사람에게 설명하게 할 수 있다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">도형의 넓이와 부피를 구하는 방법의 편리함을 인식하게 한다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">&lsquo;</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">도형과 측정</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">&rsquo; </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">영역의 문제 상황에서 문제해결 전략 비교하기</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">주어진 문제에서 필요 없는 정보나 부족한 정보 찾기</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">조건을 바꾸어 문제 만들기</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">문제해결 과정의 타당성 검토하기 등을 통하여 문제해결 역량을 기르게 한다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">&lsquo;</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">도형과 측정</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">&rsquo; </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">영역에서 자신의 문제해결 과정을 논리적으로 설명하고 다른 친구의 문제해결 과정과 비교함으로써 비판적으로 사고하는 태도를 기르게 한다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="text-indent: 10pt; font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="text-indent: 10pt; font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">(4) </span><span style="text-indent: 10pt; font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">자료와 가능성</span></p>
+<table style="border-collapse: collapse; table-layout: fixed; border-width: initial; border-style: none; border-color: initial;"> 
+<tbody> 
+<tr> 
+<td style="width: 551px; height: 96px; padding: 1px 6px; border-width: 1px; border-style: dotted; border-color: rgb(0, 0, 0); vertical-align: middle;"><span style="font-family: 굴림;"> </span>
+<p class="2" style="margin-left: 67px; text-indent: -50.3pt; margin-top: 0px;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">Ⅰ.&nbsp;&nbsp;</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">자료의 수집과 정리</span></p><span style="font-size: 12pt; font-family: 굴림;"> </span><span style="font-family: 굴림;"> </span>
+<p class="2" style="margin-left: 67px; text-indent: -50.3pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">[6</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">04-01] </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">평균의 의미를 알고</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">자료를 수집하여 평균을 구하고 해석할 수 있다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">.</span></p><span style="font-size: 12pt; font-family: 굴림;"> </span><span style="font-family: 굴림;"> </span>
+<p class="2" style="margin-left: 67px; text-indent: -50.3pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">[6</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">04-02] </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">자료를 수집하여 띠그래프나 원그래프로 나타내고 해석할 수 있다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">.</span></p><span style="font-size: 12pt; font-family: 굴림;"> </span><span style="font-family: 굴림;"> </span>
+<p class="2" style="margin-left: 67px; text-indent: -50.8pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">[6</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">04-03] </span><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 12pt;">탐구 문제를 설정하고</span><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 12pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 12pt;">그에 맞는 자료를 수집</span><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 12pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.8pt; font-size: 12pt;">정리하여 적절한 그래프로 나타내고</span><span style="font-family: 굴림; letter-spacing: -0.6pt; font-size: 12pt;"> </span><span style="font-family: 굴림; letter-spacing: -0.6pt; font-size: 12pt;">해석할 수 있다</span><span style="font-family: 굴림; letter-spacing: -0.6pt; font-size: 12pt;">.</span></p><span style="font-size: 12pt; font-family: 굴림;"> </span><span style="font-family: 굴림;"> </span>
+<p class="2" style="margin-left: 67px; text-indent: -50.8pt; letter-spacing: -0.6pt; font-size: 10pt;"><span style="font-size: 12pt; font-family: 굴림;">&nbsp;</span></p><span style="font-size: 12pt; font-family: 굴림;"> </span><span style="font-family: 굴림;"> </span>
+<p class="2" style="margin-left: 67px; text-indent: -50.3pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">Ⅱ.&nbsp;&nbsp;</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">가능성</span></p><span style="font-size: 12pt; font-family: 굴림;"> </span><span style="font-family: 굴림;"> </span>
+<p class="2" style="margin-left: 67px; text-indent: -50.3pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">[6</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">04-04] </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">사건이 일어날 가능성을 말로 표현하고 비교할 수 있다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">.</span></p><span style="font-size: 12pt; font-family: 굴림;"> </span><span style="font-family: 굴림;"> </span>
+<p class="2" style="margin-left: 67px; text-indent: -50.3pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">[6</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">04-05] </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">사건이 일어날 가능성을 수로 나타낼 수 있다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">.</span></p><span style="font-size: 12pt; font-family: 굴림;"> </span><span style="font-family: 굴림;"> </span>
+<p class="2" style="margin-left: 67px; text-indent: -50.3pt;"><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">[6</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">04-06] </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">자료를 이용하여 가능성을 예상하고</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">가능성에 근거하여 적절한 판단을 내릴 수 있다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 12pt;">.</span></p></td> 
+</tr> 
+</tbody> 
+</table>
+<p><span style="font-family: 굴림;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">(<span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">가</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">) </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">성취기준 해설</span></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">[6</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">04-01] </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">평균은 집단의 자료를 대표하는 값임을 이해하고</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">여러 집단의 평균을 비교하는 활동을 통해 수학의 유용성을 인식하게 한다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">[6</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">04-03] </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">해결하고자 하는 문제를 설정하고 그에 맞는 자료를 수집</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">정리하여</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">막대그래프</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">꺾은선그래프</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">띠그래프와 원그래프 중 적절한 그래프로 나타내고 해석하는 일련의 과정을 직접 경험하게 한다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">[6</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">04-04] &lsquo;</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">확실하다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">&rsquo;, &lsquo;</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">불가능하다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">&rsquo;, &lsquo;</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">&sim;</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">일 것 같다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">&rsquo;, &lsquo;</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">&sim;</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">아닐 것 같다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">&rsquo;, &lsquo;</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">반반이다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">&rsquo; </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">등 일상에서 사건이 일어날 가능성을 나타내는 다양한 표현을 이해하고</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">가능성의 크기를 비교하게 한다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">[6</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">04-05] </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">가능성이 직관적으로 파악되는 생활 속의 간단한 사건에 대하여 그 가능성을 </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">0, &frac12;</span><span style="font-size: 10pt;"></span><span style="font-size: 10pt;"></span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, 1 </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">등과 같은 수로 표현하게 한다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">. </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">사건이 일어날 가능성과 일어나지 않을 가능성이 같은 경우에 사건이 일어날 가능성을 &frac12;</span><span style="font-size: 10pt;"></span><span style="font-size: 10pt;"></span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">로 표현할 수 있음을 이해하게 한다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">[6</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">수</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">04-06] </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">제비뽑기</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">동전 던지기</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">주사위 던지기</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">회전판 돌리기 등과 같은 간단한 실험 </span><span style="font-family: 굴림; letter-spacing: -1.1pt; font-size: 10.5pt;">결과를 나타낸 표나 그래프를 보고 사건이 일어날 가능성을 비교하고 대략적으로 예상하게 한다</span><span style="font-family: 굴림; letter-spacing: -1.1pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">(</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">나</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">) </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">성취기준 적용 시 고려 사항</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">&lsquo;</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">자료와 가능성</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">&rsquo; </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">영역에서는 용어와 기호로 </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">&lsquo;</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">평균</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">띠그래프</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">원그래프</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">가능성</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">&rsquo;</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">을 다룬다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">자료를 수집할 때</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">간단한 설문조사</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">실험이나 관찰</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">공공 자료 활용과 같은 방법 중 탐구 목적에 적합한 것을 결정하게 한다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">평균을 구하는 방법뿐만 아니라 그 의미를 직관적으로 파악하게 한다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">복잡한 자료의 평균이나 백분율을 구할 때 계산기를 사용하게 할 수 있다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">조사 자료에서 전체에 대한 각 부분의 비율을 비교해야 하는 문제 상황을 제시하여 띠그래프와 원그래프의 필요성을 인식하게 한다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">원그래프를 그릴 때는 눈금이 표시된 원을 사용하게 한다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">띠그래프와 원그래프를 그릴 때 공학 도구를 사용하게 할 수 있다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.6pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.6pt; font-size: 10.5pt;">여러 가지 사회</span><span style="font-family: 굴림; letter-spacing: -0.6pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.6pt; font-size: 10.5pt;">환경 문제를 탐구하는 데 그림그래프</span><span style="font-family: 굴림; letter-spacing: -0.6pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.6pt; font-size: 10.5pt;">막대그래프</span><span style="font-family: 굴림; letter-spacing: -0.6pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.6pt; font-size: 10.5pt;">꺾은선그래프</span><span style="font-family: 굴림; letter-spacing: -0.6pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.6pt; font-size: 10.5pt;">띠그래프</span><span style="font-family: 굴림; letter-spacing: -0.6pt; font-size: 10.5pt;">,</span><span style="letter-spacing: -0.5pt; font-size: 10.5pt; font-family: 굴림;"> </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">원그래프로부터 얻은 정보를 활용하게 할 수 있다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">자</span><span style="font-family: 굴림; letter-spacing: -0.7pt; font-size: 10.5pt;">료 수집의 목적과 수집한 자료의 특성에 맞는 그래프로 적절히 표현되었는지</span><span style="font-family: 굴림; letter-spacing: -0.7pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.7pt; font-size: 10.5pt;">또는 정보를</span><span style="letter-spacing: -0.5pt; font-size: 10.5pt; font-family: 굴림;"> </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">왜곡하는 오류가 포함되어 있지는 않은지 등을 비판적으로 판단하게 할 수 있다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">&lsquo;</span><span style="font-family: 굴림; letter-spacing: -0.6pt; font-size: 10.5pt;">자료와 가능성</span><span style="font-family: 굴림; letter-spacing: -0.6pt; font-size: 10.5pt;">&rsquo; </span><span style="font-family: 굴림; letter-spacing: -0.6pt; font-size: 10.5pt;">영역의 문제 상황에서 문제해결 전략 비교하기</span><span style="font-family: 굴림; letter-spacing: -0.6pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.6pt; font-size: 10.5pt;">주어진 문제에서 필요 없는</span><span style="letter-spacing: -0.5pt; font-size: 10.5pt; font-family: 굴림;"> </span><span style="font-family: 굴림; letter-spacing: -0.6pt; font-size: 10.5pt;">정보나 부족한 정보 찾기</span><span style="font-family: 굴림; letter-spacing: -0.6pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.6pt; font-size: 10.5pt;">조건을 바꾸어 새로운 문제 만들기</span><span style="font-family: 굴림; letter-spacing: -0.6pt; font-size: 10.5pt;">, </span><span style="font-family: 굴림; letter-spacing: -0.6pt; font-size: 10.5pt;">문제해결 과정의 타당성 검</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">토하기 등을 통하여 문제해결 역량을 기르게 한다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;"><br></span></p>
+<p><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">&lsquo;</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">자료와 가능성</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">&rsquo; </span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">영역에서 자신의 문제해결 과정을 논리적으로 설명하고 다른 친구의 문제해결 과정과 비교함으로써 비판적으로 사고하는 태도를 기르게 한다</span><span style="font-family: 굴림; letter-spacing: -0.5pt; font-size: 10.5pt;">.</span></p></div>
+        
+    
+
+		
+			
+				<div class="community-file-wrap only_invView_file">
+					<h4 class="con-tit on">다운로드 <i class="xi-angle-up"></i></h4>
+					<div class="oif_flip active">
+						<ul class="box-group-area">
+							
+								<li>
+								    <i class="svg-icon file_pdf"></i>
+									<p class="tit">[별책8] 수학과 교육과정.pdf [pdf]</p>
+									<div class="btn-wrap">
+								      <a href="/inv/org/download.do?seq=10003559&year=2022&orgType=ogi4" class="download krds-btn medium text noLoad">다운로드 <i class="svg-icon ico-down"></i></a>
+								    </div>
+								</li>
+							
+								<li>
+								    <i class="svg-icon file_hwp"></i>
+									<p class="tit">[별책8] 수학과 교육과정.hwp [hwp]</p>
+									<div class="btn-wrap">
+								      <a href="/inv/org/download.do?seq=10003560&year=2022&orgType=ogi4" class="download krds-btn medium text noLoad">다운로드 <i class="svg-icon ico-down"></i></a>
+								    </div>
+								</li>
+							
+						</ul>
+						<div class="down-link">
+							<button type="button" class="krds-btn medium" onclick="total_down()"><i class="svg-icon ico-down"></i> 전체 압축파일 받기</button>
+						</div>
+					</div>
+				</div>
+			
+		
+	</div>
+</div>
+
+<form name="down_form" action="/inv/org/total_download.do" method="get">
+    <input type="hidden" name="year" value="" />
+    <input type="hidden" name="degree" value="" />
+    <input type="hidden" name="cls" value="" />
+    <input type="hidden" name="subject" value="" />
+    <input type="hidden" name="mon" value="" />
+    <input type="hidden" name="orgType" value="" />
+</form>
+			
+					</div>
+				</div>
+			</div>
+			
+			
+			<!-- footer -->
+			<footer id="krds-footer">
+			  <div class="foot-quick">
+			    <div class="inner">
+			      <button type="button" class="link" onclick="window.open('https://www.ne.go.kr/index.do')" title="새창으로 열림">국가교육위원회</button>
+			      <button type="button" class="link" onclick="window.open('https://www.kice.re.kr/main.do?s=kice')" title="새창으로 열림">한국교육과정평가원</button>
+			    </div>
+			  </div>
+			  <div class="inner">
+			    <div class="f-logo">
+			    	<div class="logo1">
+			    		<img src="/images/default/main/f_logo1.svg" alt="대통령 소속 국가교육위원회">
+			    	</div>
+			    	<div class="logo2">
+			    		<img src="/images/default/main/f_logo2.svg" alt="한국교육과정평가원">
+			    	</div>
+			    </div>
+			    <div class="f-cnt">
+			      <div class="f-info">
+			        <p class="info-addr">(우) 27873 충청북도 진천군 덕산읍 교학로 8 한국교육과정평가원</p>
+			      </div>
+			    </div>
+			
+			    <div class="f-btm">
+			      <div class="f-btm-text">
+			        <div class="f-menu">
+			          <a href="/mbr/terms.do" class="">이용약관 </a>
+			          <a class="f-pri-quick" href="/mbr/privacy.do" class="">개인정보처리방침</a>
+			          <a href="/mbr/policy.do" class="">저작권 정책</a>
+			        </div>
+				    <p class="f-copy">
+				        
+						Copyright(C) 2026 by NCIC. ALL RIGHTS RESERVED. 
+					</p>
+			      </div>
+			    </div>
+			  </div>
+			</footer>
+			<!-- //footer -->
+		</div>
+		
+		<!-- 2023-11-22 웹 접근성 전용 confirm 레이어 팝업 추가 bk -->
+		<div class="layer_pop">
+			<div class="pop_con" tabindex="0">
+				<h4>팝업 제목이 나타납니다.</h4>
+				<p>팝업의 내용이 나타납니다.</p>
+				<div class="pop_btn">
+					<button type="button" class="pop_cancel"> 취소</button>
+					<button type="button" class="pop_confirm"> 확인</button>
+				</div>
+			</div>
+		</div>
+		
+		<!-- 자동로그아웃 팝업 -->
+		<div id="autoLogout_comp" class="con_pop" style="display:none;">
+			<div class="popin alert">
+				<h3>자동로그아웃</h3>
+				<p class="close"><a href="javascript:close_comp();"><span>닫기</span><i class="xi-close-thin"></i></a></p>
+				<div class="txt">
+					<img src="/images/default/content/img_alert.png"  alt="" style="width:7rem;">
+					<h4>연장되었습니다.</h4>
+					<p class="logo"><img src="/images/default/main/logo_b.svg"  alt=""></p>
+				</div>
+			</div>
+		</div>
+		<!-- //자동로그아웃 팝업 -->
+	
+		<!-- 자동로그아웃 팝업 -->
+		<div id="autoLogout" class="con_pop" style="display:none;">
+			<div class="popin">
+				<h3>자동로그아웃</h3>
+				<p class="close"><a href="javascript:closeLogPop()"><span>닫기</span><i class="xi-close-thin"></i></a></p>
+				<div class="txt ac">
+					로그아웃까지 남은 시간
+					<h4 class="time">60초</h4>
+					장시간 활동이 없어 자동으로 로그아웃 됩니다.<br/>
+					계속 이용 하시려면 로그인 시간을 연장해주세요.
+				</div>
+				<div class="bottom_button">
+					<a href="/logout">로그아웃</a>
+					<a href="javascript:saveTime()" class="confirm">로그인시간 연장</a>
+				</div>
+			</div>
+		</div>
+		<!-- //자동로그아웃 팝업 -->
+		
+		<!-- 로딩 팝업 -->
+		<div class="con_pop" id="loading" style="display:none;">
+			<div class="popin">
+			<svg class="loading_spinner" xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 100 100" style="filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 4px 16px);">
+				<circle cx="50" cy="50" r="30" fill="none" stroke="#D6DBE0" stroke-width="8"></circle>
+				<circle cx="50" cy="50" r="30" fill="none" stroke="var(--main)" stroke-width="8" stroke-linecap="butt" transform="rotate(-90 50 50)">
+				<animate attributeName="stroke-dasharray" values="0,188.4;188.4,0;188.4,188.4" dur="3s" repeatCount="indefinite"></animate>
+				<animate attributeName="stroke-dashoffset" values="0;0;-188.4" dur="3s" repeatCount="indefinite"></animate></circle>
+			</svg>
+			<p>잠시만 기다려주십시오</p>
+			</div>
+		</div>
+		<!-- //로딩 팝업 -->
+		
+		<!-- common alert 팝업 -->
+        <section id="commonAlert" class="notice_pop krds-modal fade shown" role="dialog" aria-labelledby="commonAlert">
+          <div class="modal-dialog">
+            <div class="modal-content">
+             <div class="modal_inn"> 
+                  <!-- modal title -->
+                  <div class="modal-header">
+                    <div class="pop_icon cmAlert">
+                        <span></span>
+                    </div>
+                    <h2 id="tit_modal_sample_01" class="modal-title">
+                      정상적인 접근이 아닙니다.
+                    </h2>
+                  </div>
+                  <!-- //modal title -->
+                  <!-- modal contents (별다른 내용이 없으면 안나오게 처리하셔도 무방합니다.) -->
+                  <div class="modal-conts" style="display: none;">
+                    <div class="conts-area">
+                     비교할 항목을 선택한 뒤 다시 시도해주세요
+                    </div>
+                  </div>
+               </div>
+              <!-- //modal contents (별다른 내용이 없으면 안나오게 처리하셔도 무방합니다.) -->
+              <!-- modal btn -->
+              <div class="modal-btn btn-wrap">
+                <button type="button" class="krds-btn medium primary close-modal">확인</button>
+              </div>
+              <!-- //modal btn -->
+              <!-- close button -->
+              <button type="button" class="krds-btn medium icon btn-close close-modal" style="display: none;">
+                <span class="sr-only">닫기</span>
+                <i class="svg-icon ico-popup-close"></i>
+              </button>
+              <!-- //close button -->
+            </div>
+          </div>
+          <div class="modal-back in"></div>
+        </section>
+        <!-- //common alert 팝업 -->
+        
+        <!-- 언어 번역 -->
+        <div id="gtranslate_wrapper"></div>
+    
+	    <script>
+	        window.gtranslateSettings = {
+	            default_language: "ko", // 원본 언어
+	            languages: ["ko", "en"],  // 표시할 언어만 지정
+	            wrapper_selector: "#gtranslate_wrapper",
+	            detect_browser_language: false // 자동 감지 비활성화
+	        };
+	    </script>
+	    
+	    <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+	    <!-- // 언어 번역 -->
+	    
+
+<script>
+$(function () {
+  var SRC = "ko"; // 원본 언어
+
+  // --- 쿠키 유틸 ---
+  function setCookie(name, value, opts) {
+    opts = opts || {};
+    var c = name + "=" + value + "; path=/";
+    if (opts["max-age"]) c += "; max-age=" + opts["max-age"];
+    if (opts.domain)     c += "; domain=" + opts.domain;
+    document.cookie = c;
+  }
+  function clearGoogTrans() {
+    var past = "Thu, 01 Jan 1970 00:00:00 GMT";
+    var host = location.hostname.replace(/^www\./, "");
+    var domains = [location.hostname, "." + host];
+    $.each(domains, function(_, d){
+      document.cookie = "googtrans=; expires=" + past + "; path=/; domain=" + d;
+    });
+    document.cookie = "googtrans=; expires=" + past + "; path=/";
+    // 해시 제거(구버전 호환)
+    if (location.hash.indexOf("#googtrans/") === 0) {
+      try { history.replaceState(null, "", location.pathname + location.search); } catch(e){}
+    }
+  }
+  function setGoogTransCookie(src, tgt) {
+    var val = "/" + src + "/" + tgt;
+    var host = location.hostname.replace(/^www\./, "");
+    var domains = [location.hostname, "." + host];
+    $.each(domains, function(_, d){
+      setCookie("googtrans", val, {"max-age": 60*60*24*365, domain: d});
+    });
+    setCookie("googtrans", val, {"max-age": 60*60*24*365});
+    try { window.location.hash = "#googtrans/" + src + "/" + tgt; } catch(e){}
+  }
+
+  $('#langSelect .item-link').on('click', function(){
+    // 버튼 value가 'en' 또는 'kr' (혹은 'ko') 라고 하셨으니 정규화
+    var selVal = $(this).val();
+    var tgt = (selVal === 'kr') ? 'ko' : selVal;  // 'kr' -> 'ko'로 통일
+
+    if (selVal === SRC) {
+      // [한국어 복귀 시] GTranslate 설정을 원본(ko)으로 맞추고 캐시 우회 새로고침
+      try {
+        localStorage.setItem('__GT_TRANSLATE_LANGS', JSON.stringify({ srcLang: SRC, tgtLang: 'ko' })); // 로컬스토리지 값을 'ko'로 변경
+        if (typeof window.doGTranslate === 'function') {
+          window.doGTranslate('ko|ko');
+        }
+      } catch(e) {}
+      // 한국어 복귀: 쿠키/해시 삭제 후 리로드
+      clearGoogTrans();
+      window.location.reload();
+      return;
+    }
+
+    // 영어 등 타 언어: 쿠키 설정 후 리로드
+    clearGoogTrans();               // 이전 흔적 정리
+    setGoogTransCookie(SRC, tgt);   // 예: /ko/en
+    window.location.reload();
+  });
+});
+</script>
+	    
+	    <!-- 구글 번역 소스 백업
+	    <div id="google_translate_element" style="display:none;"></div>     // 숨김처리
+	        
+	    // 구글 번역 초기화 - 시작
+	    <script>
+	        function googleTranslateElementInit() {
+	            new google.translate.TranslateElement({
+	                pageLanguage: 'ko',
+	                includedLanguages: 'ko,en',
+	                autoDisplay: false
+	            }, 'google_translate_element');
+	        }
+	        
+	        document.addEventListener('DOMContentLoaded', function() {
+	            const select = document.getElementById('customTranslateSelect');
+	            
+	            select.addEventListener('change', function() {
+	                const lang = this.value;
+	                const googleCombo = document.querySelector('.goog-te-combo');
+	              
+	                if (!googleCombo) return;
+	
+	                if (lang === 'en') {
+	                    googleCombo.value = 'en';
+	                    googleCombo.dispatchEvent(new Event('change'));
+	                    
+	                } else if (lang === 'ko') {
+	                    // 원본 복원 - cookie 삭제 후 페이지 리로드
+	                    const domain = window.location.hostname;
+	                    document.cookie = 'googtrans=/ko/ko; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+	                    document.cookie = `googtrans=/ko/ko; expires=Thu, 01 Jan 1970 00:00:00 UTC; domain=; path=/;`;
+	                    location.reload();
+	                }
+	            });
+	        });
+	    </script>
+	    // 구글 번역 초기화 - 종료
+	     
+	    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>  // 스크립트 로드
+	    -->
+	    <script type="text/javascript">var _TRK_LID = "114470";var _L_TD = "ssl.logger.co.kr";var _TRK_CDMN = ".ncic.re.kr";</script>
+		<script type="text/javascript">var _CDN_DOMAIN = location.protocol == "https:" ? "https://fs.bizspring.net" : "http://fs.bizspring.net"; 
+		(function (b, s) { var f = b.getElementsByTagName(s)[0], j = b.createElement(s); j.async = true; j.src = "//fs.bizspring.net/fs4/bstrk.1.js"; f.parentNode.insertBefore(j, f); })(document, "script");
+		</script>
+		<noscript><img alt="Logger Script" width="1" height="1" src="https://ssl.logger.co.kr/tracker.1.tsp?u=114470&amp;js=N"/></noscript>
+		
+		
+		<!-- AceCounter Log Gathering Script V.8.0.AMZ2019080601 -->
+		<script language='javascript'>
+			var _AceGID=(function(){var Inf=['gtt6.acecounter.com','8080','AH6A35709843245','AW','0','NaPm,Ncisy','ALL','0']; var _CI=(!_AceGID)?[]:_AceGID.val;var _N=0;var _T=new Image(0,0);if(_CI.join('.').indexOf(Inf[3])<0){ _T.src ="https://"+ Inf[0] +'/?cookie'; _CI.push(Inf);  _N=_CI.length; } return {o: _N,val:_CI}; })();
+			var _AceCounter=(function(){var G=_AceGID;var _sc=document.createElement('script');var _sm=document.getElementsByTagName('script')[0];if(G.o!=0){var _A=G.val[G.o-1];var _G=(_A[0]).substr(0,_A[0].indexOf('.'));var _C=(_A[7]!='0')?(_A[2]):_A[3];var _U=(_A[5]).replace(/\,/g,'_');_sc.src='https:'+'//cr.acecounter.com/Web/AceCounter_'+_C+'.js?gc='+_A[2]+'&py='+_A[4]+'&gd='+_G+'&gp='+_A[1]+'&up='+_U+'&rd='+(new Date().getTime());_sm.parentNode.insertBefore(_sc,_sm);return _sc.src;}})();
+		</script>
+		<!-- AceCounter Log Gathering Script End -->
+		
+		
+		<script>
+(function () {
+	try {
+		var u   = (location.pathname + location.search).slice(0, 512);
+		var ref = (document.referrer || '').slice(0, 1000);
+		fetch('/api/stat/hit.do?u=' + encodeURIComponent(u) + '&ref=' + encodeURIComponent(ref),
+		      { credentials: 'same-origin' }).catch(function () {});
+	} catch (e) {}
+})();
+</script>
+
+		
+		
+	</body>
+</html>

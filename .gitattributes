@@ -1,0 +1,7 @@
+* text=auto eol=lf
+
+# 원문은 받은 그대로 둔다(줄바꿈 바꾸지 않음)
+원문/** -text
+*.pdf binary
+*.hwp binary
+*.hwpx binary
