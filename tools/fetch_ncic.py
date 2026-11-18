@@ -18,6 +18,18 @@ PAGES = {
     "10069378": ("5-6학년", LOC + " > 나. 성취기준"),
 }
 
+def body_only(page):
+    """누리집 메뉴·스크립트는 빼고 본문(div.boardViewContent)만 남긴다."""
+    i = page.index('<div class="boardViewContent"')
+    depth = 0
+    for m in re.finditer(r"<(/?)div\b[^>]*>", page[i:]):
+        depth += -1 if m.group(1) else 1
+        if depth == 0:
+            body = page[i:i + m.end()]
+            break
+    return "<!-- NCIC 국가교육과정정보센터 원문 인벤토리 본문 (https://ncic.re.kr) -->\n" + body + "\n"
+
+
 out = Path(__file__).resolve().parent.parent / "원문" / "ncic-web"
 out.mkdir(parents=True, exist_ok=True)
 
@@ -39,5 +51,5 @@ for seq, (name, loc) in PAGES.items():
     page = op.open(BASE + "/inv/org/view.do", data=body, timeout=30).read().decode("utf-8")
     if "boardViewContent" not in page:
         sys.exit(f"{name}: 본문이 없음")
-    (out / f"{name}.html").write_text(page, encoding="utf-8", newline="\n")
+    (out / f"{name}.html").write_text(body_only(page), encoding="utf-8", newline="\n")
     print(name, len(page))

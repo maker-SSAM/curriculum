@@ -120,13 +120,13 @@ def hwpx_lines():
     return out
 
 
-def pdf_blob():
+def pdf_blob(pages=range(16, 38)):
     """PDF 17~38쪽 글자를 한 줄로(띄어쓰기·수식 기호 뺌). pypdf가 몇 쪽은 글상자 순서를 뒤섞어 읽으므로
     구조로 나누지 않고 '이 문장이 PDF 안에 있는가'만 본다."""
     from pypdf import PdfReader
     r = PdfReader(str(PDF))
     raw = []
-    for i in range(16, 38):  # 17~38쪽
+    for i in pages:  # 기본 17~38쪽
         for ln in (r.pages[i].extract_text() or "").split("\n"):
             s = ln.strip()
             if s in ("공통 교육과정", "수학과 교육과정") or re.fullmatch(r"\d{1,3}", s):

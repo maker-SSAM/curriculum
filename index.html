@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>성취기준 쉽게보기 — 2022 개정 초등 수학</title>
+<meta name="description" content="2022 개정 교육과정 초등학교 수학 성취기준 121개를 학년군·영역으로 골라 보고, 검색·복사·CSV로 내보내고, 교육과정 원문까지 한곳에서 봅니다.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="maker_ssam">
+<meta property="og:title" content="성취기준 쉽게보기 — 2022 개정 초등 수학">
+<meta property="og:description" content="초등 수학 성취기준 121개를 학년군·영역으로 골라 보고, 복사·CSV로 내보내고, 교육과정 원문까지 한곳에서.">
+<meta property="og:url" content="https://maker-ssam.github.io/curriculum/">
+<meta property="og:image" content="https://maker-ssam.github.io/curriculum/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="성취기준 쉽게보기 — 2022 개정 초등 수학 성취기준 121개">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://maker-ssam.github.io/korean-ofl-fonts/fonts/pretendard/pretendard.css">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<header class="top">
+  <div class="wrap top-in">
+    <div class="brand">
+      <h1>성취기준 쉽게보기</h1>
+      <p class="sub">2022 개정 교육과정 · 초등학교 수학 <span class="dot">·</span> 성취기준 <b id="total">121</b>개</p>
+    </div>
+    <nav class="tabs" role="tablist" aria-label="보기 고르기">
+      <button role="tab" id="tab-standards" aria-controls="view-standards" data-view="standards">성취기준</button>
+      <button role="tab" id="tab-overview" aria-controls="view-overview" data-view="overview">한눈에 보기</button>
+      <button role="tab" id="tab-wonmun" aria-controls="view-wonmun" data-view="wonmun">교육과정 원문</button>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+  <!-- 성취기준 -->
+  <section id="view-standards" role="tabpanel" aria-labelledby="tab-standards" class="view">
+    <div class="filters" id="filters">
+      <label class="search">
+        <span class="sr">검색</span>
+        <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="q" type="search" placeholder="낱말이나 코드로 찾기 (예: 분수, 4수03)" autocomplete="off">
+      </label>
+      <div class="chips" role="group" aria-label="학년군" id="band-chips"></div>
+      <div class="chips" role="group" aria-label="영역" id="area-chips"></div>
+    </div>
+
+    <div class="actions" id="actions">
+      <p class="count" id="count" aria-live="polite"></p>
+      <div class="btns">
+        <button class="btn ghost" id="sel-all" type="button">보이는 것 모두 고르기</button>
+        <button class="btn ghost" id="sel-none" type="button" hidden>고른 것 풀기</button>
+        <button class="btn ghost" id="expand" type="button" aria-pressed="false">해설 모두 펼치기</button>
+        <button class="btn" id="copy" type="button">복사</button>
+        <button class="btn" id="csv" type="button">CSV 저장</button>
+        <a class="btn" id="md" download>전문 md 받기</a>
+      </div>
+    </div>
+
+    <div id="list" class="list"></div>
+  </section>
+
+  <!-- 한눈에 보기 -->
+  <section id="view-overview" role="tabpanel" aria-labelledby="tab-overview" class="view" hidden>
+    <p class="lead">영역별·학년군별 소주제와 성취기준 수입니다. 소주제를 누르면 그 성취기준으로 갑니다.</p>
+    <div id="matrix" class="matrix"></div>
+  </section>
+
+  <!-- 교육과정 원문 -->
+  <section id="view-wonmun" role="tabpanel" aria-labelledby="tab-wonmun" class="view" hidden>
+    <div class="doc-layout">
+      <nav class="toc" aria-label="원문 차례">
+        <details id="toc-box" open>
+          <summary>차례</summary>
+          <ol id="toc"></ol>
+        </details>
+      </nav>
+      <article class="doc" id="doc"></article>
+    </div>
+  </section>
+</main>
+
+<footer class="foot wrap">
+  <p>출처: 교육부 고시 제2022-33호 [별책 8] 수학과 교육과정(2022.12.22.). 본문은 <a href="https://ncic.re.kr" rel="noopener">NCIC 국가교육과정정보센터</a> 원문 인벤토리에서 받아 공식 PDF·HWP와 한 문장씩 맞춰 보았습니다.
+  공식 파일: <a id="f-pdf">PDF</a> · <a id="f-hwp">HWP</a> · <a id="f-hwpx">HWPX</a></p>
+  <p>원문은 바꾸지 않았습니다. 수업·평가 계획에 쓰기 전 공식 문서와 한 번 더 확인해 주세요. · 만든 사람 <a href="https://maker-ssam.github.io/">maker_ssam</a></p>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="assets/data.js"></script>
+<script src="assets/app.js"></script>
+<!-- 방문 집계: Cloudflare Web Analytics(쿠키 없음). 실제 주소에서만, 다른 페이지 안(iframe)에서는 세지 않는다 -->
+<script>if(location.hostname==='maker-ssam.github.io'&&window.self===window.top){var s=document.createElement('script');s.defer=true;s.src='https://static.cloudflareinsights.com/beacon.min.js';s.setAttribute('data-cf-beacon','{"token": "50978c2fd5224087936fd5e326e45675"}');document.body.appendChild(s);}</script>
+</body>
+</html>
